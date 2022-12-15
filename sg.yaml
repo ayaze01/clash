@@ -1,5 +1,4 @@
 proxies:
-proxies:
 - name: "ID-IKD WS-SSL"
   type: vmess
   server: 104.17.3.81
