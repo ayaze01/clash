@@ -315,11 +315,9 @@ script:
     speedtest: network == "tcp" and match_provider("rule_Speedtest")
 rule-providers:
   rule_Direct:
-    type: http
+    type: file
     behavior: classical
     path: "./rule_provider/rule_direct.yaml"
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_direct.yaml
-    interval: 86400
   rule_umum:
     type: http
     behavior: classical
@@ -469,6 +467,84 @@ rule-providers:
     behavior: classical
     url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_hboasia.yaml
     path: "./rule_provider/rule_hboasia.yaml"
+    interval: 86400
+  rule_hbohk:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_hbohk.yaml
+    path: "./rule_provider/rule_hbohk.yaml"
+    interval: 86400
+  rule_hbousa:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_hbousa.yaml
+    path: "./rule_provider/rule_hbousa.yaml"
+    interval: 86400
+  rule_iqiyi:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_iqiyi.yaml
+    path: "./rule_provider/rule_iqiyi.yaml"
+    interval: 86400
+  rule_iqiyiinter:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_iqiyiinter.yaml
+    path: "./rule_provider/rule_iqiyiinter.yaml"
+    interval: 86400
+  rule_line:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_line.yaml
+    path: "./rule_provider/rule_line.yaml"
+    interval: 86400
+  rule_metaverse:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_metaverse.yaml
+    path: "./rule_provider/rule_metaverse.yaml"
+    interval: 86400
+  rule_netflix:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_netflix.yaml
+    path: "./rule_provider/rule_netflix.yaml"
+    interval: 86400
+  rule_primevideo:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_primevideo.yaml
+    path: "./rule_provider/rule_primevideo.yaml"
+    interval: 86400
+  rule_playstore:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_playstore.yaml
+    path: "./rule_provider/rule_playstore.yaml"
+    interval: 86400
+  rule_tiktok:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_tiktok.yaml
+    path: "./rule_provider/rule_tiktok.yaml"
+    interval: 86400
+  rule_twitch:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_twitch.yaml
+    path: "./rule_provider/rule_twitch.yaml"
+    interval: 86400
+  rule_twitter:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_twitter.yaml
+    path: "./rule_provider/rule_twitter.yaml"
+    interval: 86400
+  rule_Youtube:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_youtube.yaml
+    path: "./rule_provider/rule_youtube.yaml"
     interval: 86400
 
 rules:
