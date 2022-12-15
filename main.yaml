@@ -191,7 +191,7 @@ tun:
   - tcp://any:53
 
 proxy-groups:
-  - name: Route-ID
+  - name: Route ID
     type: load-balancing
     strategy: round-robin
     disable-udp: rule_falsepositive
@@ -200,7 +200,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 360 
 
-  - name: Route-SG
+  - name: Route SG
     type: load-balancing
     strategy: round-robin
     disable-udp: rule_falsepositive
