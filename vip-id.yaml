@@ -1,1 +1,38 @@
 proxies:
+- name: "ID-IKD WS-SSL"
+  type: vmess
+  server: 104.17.3.81
+  port: 443
+  uuid: d22d82c1-94cd-482e-80a6-82a9a69820ff
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  servername: id-ikdv2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /vmessws
+    headers:
+      Host: id-ikdv2.cemilan-vpn.my.id
+    max-early-data: 2048
+    early-data-header-name: Sec-WebSocket-Protocol
+
+- name: "ID-INFINYS WS-SSL"
+  type: vmess
+  server: 104.17.3.81
+  port: 443
+  uuid: 694f5c38-885e-40cd-b22c-7cc1612a69b2
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  servername: id-06v2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /vmessws
+    headers:
+      Host: id-06v2.cemilan-vpn.my.id
+    max-early-data: 2048
+    early-data-header-name: Sec-WebSocket-Protocol
