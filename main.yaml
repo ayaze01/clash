@@ -194,7 +194,7 @@ proxy-groups:
   - name: Route ID
     type: load-balancing
     strategy: round-robin
-    disable-udp: rule_falsepositive
+    disable-udp: false
     use:
       - VIP-ID
     url: http://www.gstatic.com/generate_204
@@ -203,7 +203,7 @@ proxy-groups:
   - name: Route SG
     type: load-balancing
     strategy: round-robin
-    disable-udp: rule_falsepositive
+    disable-udp: false
     use:
       - VIP-SG
     url: http://www.gstatic.com/generate_204
