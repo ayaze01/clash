@@ -315,9 +315,11 @@ script:
     speedtest: network == "tcp" and match_provider("rule_Speedtest")
 rule-providers:
   rule_Direct:
-    type: file
+    type: http
     behavior: classical
     path: "./rule_provider/rule_direct.yaml"
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_direct.yaml
+    interval: 86400
   rule_umum:
     type: http
     behavior: classical
