@@ -268,7 +268,7 @@ proxy-groups:
     interval: '30'
 
   - name: TrafficStreaming
-    type: fallback
+    type: url-test
     lazy: true
     disable-udp: false
     proxies:
