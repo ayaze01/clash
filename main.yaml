@@ -292,7 +292,7 @@ proxy-groups:
 proxy-providers:
   VIP-ID:
     type: http
-    url: https://raw.githubusercontent.com/ayaze01/clash/main/vip-id.yaml
+    url: https://raw.githubusercontent.com/ayaze01/clash/main/id.yaml
     path: "./proxy_provider/vip-id.yaml"
     health-check:
       enable: true
@@ -301,7 +301,7 @@ proxy-providers:
 
   VIP-SG:
     type: http
-    url: https://raw.githubusercontent.com/ayaze01/clash/main/vip-sg.yaml
+    url: https://raw.githubusercontent.com/ayaze01/clash/main/sg.yaml
     path: "./proxy_provider/vip-sg.yaml"
     health-check:
       enable: true
