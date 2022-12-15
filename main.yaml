@@ -192,7 +192,7 @@ tun:
 
 proxy-groups:
   - name: Route ID
-    type: load-balancing
+    type: load-balance
     strategy: round-robin
     disable-udp: false
     use:
@@ -201,7 +201,7 @@ proxy-groups:
     interval: 360 
 
   - name: Route SG
-    type: load-balancing
+    type: load-balance
     strategy: round-robin
     disable-udp: false
     use:
