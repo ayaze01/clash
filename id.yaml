@@ -36,3 +36,41 @@ proxies:
       Host: id-06v2.cemilan-vpn.my.id
     max-early-data: 2048
     early-data-header-name: Sec-WebSocket-Protocol
+
+- name: "ID-APIK WS-SSL"
+  type: vmess
+  server: 104.17.3.81
+  port: 443
+  uuid: e89ade27-68f6-4c58-994f-b7a130203b25
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  servername: id-apikv2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /vmessws
+    headers:
+      Host: id-apikv2.cemilan-vpn.my.id
+    max-early-data: 2048
+    early-data-header-name: Sec-WebSocket-Protocol
+ 
+ - name: "ID-IDC WS-SSL"
+  type: vmess
+  server: 104.17.3.81
+  port: 443
+  uuid: dea4858b-4827-4057-bcc9-e28bd55e1d3c
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  servername: id-05v2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /vmessws
+    headers:
+      Host: id-05v2.cemilan-vpn.my.id
+    max-early-data: 2048
+    early-data-header-name: Sec-WebSocket-Protocol
