@@ -262,7 +262,6 @@ proxy-groups:
     - Ping SG
     - Fallback ID
     - Fallback SG
-    - General Relay
     - Plain
     url: http://www.gstatic.com/generate_204
     interval: 360 
@@ -278,7 +277,6 @@ proxy-groups:
     - Ping SG
     - Fallback ID
     - Fallback SG
-    - General Relay
     - Plain
     url: http://www.gstatic.com/generate_204
     interval: '30'
@@ -294,7 +292,6 @@ proxy-groups:
     - Ping SG
     - Fallback ID
     - Fallback SG
-    - General Relay
     - Plain
     url: http://www.gstatic.com/generate_204
     interval: '30'
