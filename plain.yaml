@@ -599,4 +599,4 @@ rules:
 - RULE-SET,rule_games,Plain
 - RULE-SET,rule_discord,Plain
 - RULE-SET,rule_umum,Plain
-- MATCH,GLOBAL
+
