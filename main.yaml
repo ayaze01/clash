@@ -207,14 +207,34 @@ proxy-groups:
     use:
       - VIP-SG
     url: http://www.gstatic.com/generate_204
-    interval: 360 
+    interval: 360
+    
+  - name: Fallback ID
+    type: fallback
+    lazy: true
+    disable-udp: false
+    use:
+    - VIP-ID
+    url: http://www.gstatic.com/generate_204
+    interval: '30'
 
+  - name: Fallback SG
+    type: fallback
+    lazy: true
+    disable-udp: false
+    use:
+    - VIP-SG
+    url: http://www.gstatic.com/generate_204
+    interval: '30'
+    
   - name: TrafficDirect
     type: select
     disable-udp: false
     proxies:
     - Route ID
     - Route SG
+    - Fallback ID
+    - Fallback SG
 
   - name: TrafficPortGames
     type: select
@@ -222,6 +242,8 @@ proxy-groups:
     proxies:
     - Route ID
     - Route SG
+    - Fallback ID
+    - Fallback SG
 
   - name: TrafficGaming
     type: select
@@ -229,6 +251,8 @@ proxy-groups:
     proxies:
     - Route ID
     - Route SG
+    - Fallback ID
+    - Fallback SG
 
   - name: TrafficAds
     type: select
@@ -237,6 +261,8 @@ proxy-groups:
     - REJECT
     - Route ID
     - Route SG
+    - Fallback ID
+    - Fallback SG
 
   - name: TrafficPorn
     type: select
@@ -245,6 +271,8 @@ proxy-groups:
     - REJECT
     - Route ID
     - Route SG
+    - Fallback ID
+    - Fallback SG
 
   - name: TrafficUmum
     type: fallback
@@ -253,6 +281,8 @@ proxy-groups:
     proxies:
     - Route ID
     - Route SG
+    - Fallback ID
+    - Fallback SG
     url: http://www.gstatic.com/generate_204
     interval: '30'
 
@@ -263,6 +293,8 @@ proxy-groups:
     proxies:
     - Route ID
     - Route SG
+    - Fallback ID
+    - Fallback SG
     - TrafficDirect
     url: http://www.gstatic.com/generate_204
     interval: '30'
@@ -274,6 +306,8 @@ proxy-groups:
     proxies:
     - Route ID
     - Route SG
+    - Fallback ID
+    - Fallback SG
     - TrafficDirect
     url: http://www.gstatic.com/generate_204
     interval: '30'
@@ -285,6 +319,8 @@ proxy-groups:
     proxies:
     - Route ID
     - Route SG
+    - Fallback ID
+    - Fallback SG
     - TrafficDirect
     url: http://www.gstatic.com/generate_204
     interval: '30'
