@@ -56,7 +56,7 @@ proxies:
     max-early-data: 2048
     early-data-header-name: Sec-WebSocket-Protocol
  
- - name: "ID-IDC WS-SSL"
+- name: "ID-IDC WS-SSL"
   type: vmess
   server: 104.17.3.81
   port: 443
