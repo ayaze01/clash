@@ -191,7 +191,7 @@ tun:
   - tcp://any:53
 
 proxy-groups:
-  - name: Route ID
+  - name: Balance ID
     type: load-balance
     strategy: round-robin
     disable-udp: false
@@ -200,7 +200,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 360 
 
-  - name: Route SG
+  - name: Balance SG
     type: load-balance
     strategy: round-robin
     disable-udp: false
@@ -208,6 +208,24 @@ proxy-groups:
       - VIP-SG
     url: http://www.gstatic.com/generate_204
     interval: 360
+     
+  - name: Ping ID
+    type: url-test
+    lazy: true
+    disable-udp: false
+    use:
+    - VIP-ID
+    url: http://www.gstatic.com/generate_204
+    interval: '30'
+    
+  - name: Ping SG
+    type: url-test
+    lazy: true
+    disable-udp: false
+    use:
+    - VIP-SG
+    url: http://www.gstatic.com/generate_204
+    interval: '30'
     
   - name: Fallback ID
     type: fallback
@@ -231,8 +249,10 @@ proxy-groups:
     type: select
     disable-udp: false
     proxies:
-    - Route ID
-    - Route SG
+    - Balance ID
+    - Balance SG
+    - Ping ID
+    - PIng SG
     - Fallback ID
     - Fallback SG
 
@@ -240,8 +260,10 @@ proxy-groups:
     type: select
     disable-udp: false
     proxies:
-    - Route ID
-    - Route SG
+    - Balance ID
+    - Balance SG
+    - Ping ID
+    - PIng SG
     - Fallback ID
     - Fallback SG
 
@@ -249,8 +271,10 @@ proxy-groups:
     type: select
     disable-udp: false
     proxies:
-    - Route ID
-    - Route SG
+    - Balance ID
+    - Balance SG
+    - Ping ID
+    - PIng SG
     - Fallback ID
     - Fallback SG
 
@@ -259,8 +283,10 @@ proxy-groups:
     disable-udp: false
     proxies:
     - REJECT
-    - Route ID
-    - Route SG
+    - Balance ID
+    - Balance SG
+    - Ping ID
+    - PIng SG
     - Fallback ID
     - Fallback SG
 
@@ -269,8 +295,10 @@ proxy-groups:
     disable-udp: false
     proxies:
     - REJECT
-    - Route ID
-    - Route SG
+    - Balance ID
+    - Balance SG
+    - Ping ID
+    - PIng SG
     - Fallback ID
     - Fallback SG
 
@@ -279,8 +307,10 @@ proxy-groups:
     lazy: true
     disable-udp: false
     proxies:
-    - Route ID
-    - Route SG
+    - Balance ID
+    - Balance SG
+    - Ping ID
+    - PIng SG
     - Fallback ID
     - Fallback SG
     url: http://www.gstatic.com/generate_204
@@ -291,8 +321,10 @@ proxy-groups:
     lazy: true
     disable-udp: false
     proxies:
-    - Route ID
-    - Route SG
+    - Balance ID
+    - Balance SG
+    - Ping ID
+    - PIng SG
     - Fallback ID
     - Fallback SG
     - TrafficDirect
@@ -304,8 +336,10 @@ proxy-groups:
     lazy: true
     disable-udp: false
     proxies:
-    - Route ID
-    - Route SG
+    - Balance ID
+    - Balance SG
+    - Ping ID
+    - PIng SG
     - Fallback ID
     - Fallback SG
     - TrafficDirect
@@ -317,8 +351,10 @@ proxy-groups:
     lazy: true
     disable-udp: false
     proxies:
-    - Route ID
-    - Route SG
+    - Balance ID
+    - Balance SG
+    - Ping ID
+    - PIng SG
     - Fallback ID
     - Fallback SG
     - TrafficDirect
