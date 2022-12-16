@@ -216,7 +216,7 @@ proxy-groups:
     proxies:
     - Route ID
     - Route SG
-    - TrafficDirect
+    - Plain
     url: http://www.gstatic.com/generate_204
     interval: '30'
 
@@ -224,6 +224,32 @@ proxy-groups:
     type: select
     disable-udp: false
     proxies:
+    - Route ID
+    - Route SG
+
+  - name: Fallback ID
+    type: fallback
+    lazy: true
+    disable-udp: false
+    proxies:
+    - Route ID
+    url: http://www.gstatic.com/generate_204
+    interval: '30'
+
+  - name: Fallback SG
+    type: fallback
+    lazy: true
+    disable-udp: false
+    proxies:
+    - Route SG
+    url: http://www.gstatic.com/generate_204
+    interval: '30'
+
+  - name: TrafficAds
+    type: select
+    disable-udp: false
+    proxies:
+    - REJECT
     - Route ID
     - Route SG
 
@@ -490,4 +516,12 @@ rule-providers:
 rules:
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
 - DST-PORT,22,Plain
+- RULE-SET,rule_lancidr,DIRECT,no-resolve
+- RULE-SET,rule_falsepositive,Plain
+- RULE-SET,rule_malicious,REJECT
+- RULE-SET,rule_maliciousip,REJECT
+- RULE-SET,rule_personalads,TrafficAds
+- RULE-SET,rule_basicads,TrafficAds
+- RULE-SET,rule_hijacking,TrafficAds
+- RULE-SET,rule_privacy,TrafficAds
 - MATCH,GLOBAL
