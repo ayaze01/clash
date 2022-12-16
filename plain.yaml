@@ -253,7 +253,7 @@ proxy-groups:
     - Balance ID
     - Balance SG
     - Ping ID
-    - PIng SG
+    - Ping SG
     - Fallback ID
     - Fallback SG
     - Plain
@@ -291,7 +291,7 @@ proxy-groups:
     - Balance ID
     - Balance SG
     - Ping ID
-    - PIng SG
+    - Ping SG
     - Fallback ID
     - Fallback SG
 
