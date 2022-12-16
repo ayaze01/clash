@@ -191,7 +191,7 @@ tun:
   - tcp://any:53
 
 proxy-groups:
-  - name: Route ID
+  - name: Balance ID
     type: load-balance
     strategy: round-robin
     disable-udp: false
@@ -200,7 +200,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 360 
 
-  - name: Route SG
+  - name: Balance SG
     type: load-balance
     strategy: round-robin
     disable-udp: false
@@ -209,27 +209,23 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 360 
 
-  - name: Best Ping
+  - name: Ping ID
     type: url-test
     lazy: true
     disable-udp: false
-    proxies:
-    - Route ID
-    - Route SG
-    - Fallback ID
-    - Fallback SG
-    - Plain
+    use:
+    - VIP-ID
     url: http://www.gstatic.com/generate_204
     interval: '30'
-
-  - name: Plain
-    type: select
+    
+  - name: Ping SG
+    type: url-test
+    lazy: true
     disable-udp: false
-    proxies:
-    - Route ID
-    - Route SG
-    - Fallback ID
-    - Fallback SG
+    use:
+    - VIP-SG
+    url: http://www.gstatic.com/generate_204
+    interval: '30'
 
   - name: Fallback ID
     type: fallback
@@ -249,13 +245,41 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: '30'
 
+  - name: General Ping
+    type: url-test
+    lazy: true
+    disable-udp: false
+    proxies:
+    - Balance ID
+    - Balance SG
+    - Ping ID
+    - PIng SG
+    - Fallback ID
+    - Fallback SG
+    - Plain
+    url: http://www.gstatic.com/generate_204
+    interval: '30'
+
+  - name: Plain
+    type: select
+    disable-udp: false
+    proxies:
+    - Balance ID
+    - Balance SG
+    - Ping ID
+    - Ping SG
+    - Fallback ID
+    - Fallback SG
+    
   - name: TrafficAds
     type: select
     disable-udp: false
     proxies:
     - REJECT
-    - Route ID
-    - Route SG
+    - Balance ID
+    - Balance SG
+    - Ping ID
+    - Ping SG
     - Fallback ID
     - Fallback SG
     
@@ -264,8 +288,10 @@ proxy-groups:
     disable-udp: false
     proxies:
     - REJECT
-    - Route ID
-    - Route SG
+    - Balance ID
+    - Balance SG
+    - Ping ID
+    - PIng SG
     - Fallback ID
     - Fallback SG
 
