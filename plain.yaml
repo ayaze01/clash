@@ -226,6 +226,8 @@ proxy-groups:
     proxies:
     - Route ID
     - Route SG
+    - Fallback ID
+    - Fallback SG
 
   - name: Fallback ID
     type: fallback
@@ -246,6 +248,14 @@ proxy-groups:
     interval: '30'
 
   - name: TrafficAds
+    type: select
+    disable-udp: false
+    proxies:
+    - REJECT
+    - Route ID
+    - Route SG
+    
+  - name: TrafficPorn
     type: select
     disable-udp: false
     proxies:
@@ -524,4 +534,37 @@ rules:
 - RULE-SET,rule_basicads,TrafficAds
 - RULE-SET,rule_hijacking,TrafficAds
 - RULE-SET,rule_privacy,TrafficAds
+- RULE-SET,rule_porn,TrafficPorn
+- RULE-SET,rule_nsfw,TrafficPorn
+- RULE-SET,rule_Direct,Plain
+- SCRIPT,speedtest,Plain
+- RULE-SET,rule_playstore,Plain
+- RULE-SET,rule_disneyplus,Plain
+- RULE-SET,rule_netflix,Plain
+- RULE-SET,rule_Indo,Plain
+- RULE-SET,rule_hbo,Plain
+- RULE-SET,rule_hboasia,Plain
+- RULE-SET,rule_hbohk,Plain
+- RULE-SET,rule_hbousa,Plain
+- RULE-SET,rule_Streaming,Plain
+- RULE-SET,rule_iqiyi,Plain
+- RULE-SET,rule_iqiyiinter,Plain
+- RULE-SET,rule_primevideo,Plain
+- RULE-SET,rule_twitch,Plain
+- RULE-SET,rule_Youtube,Plain
+- RULE-SET,rule_Sosmed,Plain
+- RULE-SET,rule_line,Plain
+- RULE-SET,rule_metaverse,Plain
+- RULE-SET,rule_tiktok,Plain
+- RULE-SET,rule_twitter,Plain
+- RULE-SET,rule_telegram,Plain
+- RULE-SET,rule_telegramcidr,Plain
+- RULE-SET,rule_videoconferences,Plain
+- RULE-SET,rule_portgames,Plain
+- SCRIPT,TCPgames,Plain
+- SCRIPT,UDPgames,Plain
+- RULE-SET,rule_Gaming,Plain
+- RULE-SET,rule_games,Plain
+- RULE-SET,rule_discord,Plain
+- RULE-SET,rule_umum,Plain
 - MATCH,GLOBAL
