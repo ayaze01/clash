@@ -189,7 +189,6 @@ tun:
   auto-detect-interface: false
   dns-hijack:
   - tcp://any:53
-
 proxy-groups:
   - name: Balance ID
     type: load-balance
@@ -199,7 +198,6 @@ proxy-groups:
       - VIP-ID
     url: http://www.gstatic.com/generate_204
     interval: 360 
-
   - name: Balance SG
     type: load-balance
     strategy: round-robin
@@ -208,7 +206,6 @@ proxy-groups:
       - VIP-SG
     url: http://www.gstatic.com/generate_204
     interval: 360 
-
   - name: Ping ID
     type: url-test
     lazy: true
@@ -226,7 +223,6 @@ proxy-groups:
     - VIP-SG
     url: http://www.gstatic.com/generate_204
     interval: '30'
-
   - name: Fallback ID
     type: fallback
     lazy: true
@@ -235,7 +231,6 @@ proxy-groups:
     - VIP-ID
     url: http://www.gstatic.com/generate_204
     interval: '30'
-
   - name: Fallback SG
     type: fallback
     lazy: true
@@ -245,15 +240,19 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: '30'
 
-  - name: General Relay
-    type: relay
-    use: 
-    - VIP-ID
-    - VIP-SG
-
   - name: General Ping
     type: url-test
     lazy: true
+
+    
+        
+          
+    
+
+        
+    
+    @@ -256,6 +278,23 @@ proxy-groups:
+  
     disable-udp: false
     proxies:
     - Balance ID
@@ -266,6 +265,15 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: '30'
 
+    
+        
+          
+    
+
+        
+    
+    @@ -270,6 +309,9 @@ proxy-groups:
+  
   - name: Plain
     type: select
     disable-udp: false
@@ -276,9 +284,19 @@ proxy-groups:
     - Ping SG
     - Fallback ID
     - Fallback SG
-    
+
   - name: TrafficAds
     type: select
+
+    
+        
+          
+    
+
+        
+    
+    @@ -282,6 +324,9 @@ proxy-groups:
+  
     disable-udp: false
     proxies:
     - REJECT
@@ -288,10 +306,19 @@ proxy-groups:
     - Ping SG
     - Fallback ID
     - Fallback SG
-    - General Ping
-    
+
   - name: TrafficPorn
     type: select
+
+    
+        
+          
+    
+
+        
+    
+    @@ -294,7 +339,10 @@ proxy-groups:
+  
     disable-udp: false
     proxies:
     - REJECT
@@ -301,18 +328,26 @@ proxy-groups:
     - Ping SG
     - Fallback ID
     - Fallback SG
-    - General Ping
-    
+
 proxy-providers:
   VIP-ID:
     type: http
+
+    
+          
+            
+    
+
+          
+    
+    
+  
     url: https://raw.githubusercontent.com/ayaze01/clash/main/id.yaml
     path: "./proxy_provider/vip-id.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 180
-
   VIP-SG:
     type: http
     url: https://raw.githubusercontent.com/ayaze01/clash/main/sg.yaml
@@ -321,7 +356,6 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 180
-
 script:
   shortcuts:
     TCPgames: network == 'tcp' and dst_port not in [21, 22, 23, 53, 80, 123, 143, 194, 443, 465, 587, 853, 993, 995, 998, 2052, 2053, 2082, 2083, 2086, 2095, 2096, 5222, 5228, 5229, 5230, 8080, 8443, 8880, 8883, 8888, 8889]
@@ -562,7 +596,6 @@ rule-providers:
     url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_youtube.yaml
     path: "./rule_provider/rule_youtube.yaml"
     interval: 86400
-
 rules:
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
 - DST-PORT,22,Plain
