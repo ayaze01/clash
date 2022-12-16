@@ -189,6 +189,7 @@ tun:
   auto-detect-interface: false
   dns-hijack:
   - tcp://any:53
+
 proxy-groups:
   - name: Balance ID
     type: load-balance
@@ -198,6 +199,7 @@ proxy-groups:
       - VIP-ID
     url: http://www.gstatic.com/generate_204
     interval: 360 
+    
   - name: Balance SG
     type: load-balance
     strategy: round-robin
@@ -210,16 +212,6 @@ proxy-groups:
   - name: Ping ID
     type: url-test
     lazy: true
-
-    
-        
-          
-    
-
-        
-    
-    @@ -226,7 +226,7 @@ proxy-groups:
-  
     disable-udp: false
     use:
     - VIP-ID
@@ -238,21 +230,12 @@ proxy-groups:
   - name: Fallback ID
     type: fallback
     lazy: true
-
-    
-        
-          
-    
-
-        
-    
-    @@ -244,6 +244,57 @@ proxy-groups:
-  
     disable-udp: false
     use:
     - VIP-ID
     url: http://www.gstatic.com/generate_204
     interval: '30'
+
   - name: Fallback SG
     type: fallback
     lazy: true
@@ -264,16 +247,6 @@ proxy-groups:
 
   - name: TrafficDirect
     type: select
-
-    
-        
-          
-    
-
-        
-    
-    @@ -255,6 +306,9 @@ proxy-groups:
-  
     disable-udp: false
     proxies:
     - Balance ID
@@ -285,16 +258,6 @@ proxy-groups:
 
   - name: TrafficPortGames
     type: select
-
-    
-        
-          
-    
-
-        
-    
-    @@ -266,6 +320,9 @@ proxy-groups:
-  
     disable-udp: false
     proxies:
     - Balance ID
@@ -306,16 +269,6 @@ proxy-groups:
 
   - name: TrafficGaming
     type: select
-
-    
-        
-          
-    
-
-        
-    
-    @@ -277,6 +334,9 @@ proxy-groups:
-  
     disable-udp: false
     proxies:
     - Balance ID
@@ -327,16 +280,6 @@ proxy-groups:
 
   - name: TrafficAds
     type: select
-
-    
-        
-          
-    
-
-        
-    
-    @@ -289,6 +349,9 @@ proxy-groups:
-  
     disable-udp: false
     proxies:
     - REJECT
@@ -349,16 +292,6 @@ proxy-groups:
 
   - name: TrafficPorn
     type: select
-
-    
-        
-          
-    
-
-        
-    
-    @@ -301,6 +364,9 @@ proxy-groups:
-  
     disable-udp: false
     proxies:
     - REJECT
@@ -371,16 +304,6 @@ proxy-groups:
 
   - name: TrafficUmum
     type: fallback
-
-    
-        
-          
-    
-
-        
-    
-    @@ -313,6 +379,9 @@ proxy-groups:
-  
     lazy: true
     disable-udp: false
     proxies:
@@ -393,16 +316,6 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: '30'
 
-
-    
-        
-          
-    
-
-        
-    
-    @@ -328,6 +397,9 @@ proxy-groups:
-  
   - name: TrafficIndo
     type: fallback
     lazy: true
@@ -418,16 +331,6 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: '30'
 
-
-    
-        
-          
-    
-
-        
-    
-    @@ -343,6 +415,9 @@ proxy-groups:
-  
   - name: TrafficStreaming
     type: url-test
     lazy: true
@@ -443,16 +346,6 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: '30'
 
-
-    
-        
-          
-    
-
-        
-    
-    @@ -358,6 +433,9 @@ proxy-groups:
-  
   - name: TrafficSosmed
     type: url-test
     lazy: true
@@ -467,16 +360,6 @@ proxy-groups:
     - TrafficDirect
     url: http://www.gstatic.com/generate_204
     interval: '30'
-
-
-    
-          
-            
-    
-
-          
-    
-    
   
 proxy-providers:
   VIP-ID:
