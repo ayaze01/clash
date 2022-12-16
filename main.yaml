@@ -252,7 +252,7 @@ proxy-groups:
     - Balance ID
     - Balance SG
     - Ping ID
-    - PIng SG
+    - Ping SG
     - Fallback ID
     - Fallback SG
 
@@ -263,7 +263,7 @@ proxy-groups:
     - Balance ID
     - Balance SG
     - Ping ID
-    - PIng SG
+    - Ping SG
     - Fallback ID
     - Fallback SG
 
@@ -274,7 +274,7 @@ proxy-groups:
     - Balance ID
     - Balance SG
     - Ping ID
-    - PIng SG
+    - Ping SG
     - Fallback ID
     - Fallback SG
 
@@ -286,7 +286,7 @@ proxy-groups:
     - Balance ID
     - Balance SG
     - Ping ID
-    - PIng SG
+    - Ping SG
     - Fallback ID
     - Fallback SG
 
@@ -298,7 +298,7 @@ proxy-groups:
     - Balance ID
     - Balance SG
     - Ping ID
-    - PIng SG
+    - Ping SG
     - Fallback ID
     - Fallback SG
 
@@ -310,7 +310,7 @@ proxy-groups:
     - Balance ID
     - Balance SG
     - Ping ID
-    - PIng SG
+    - Ping SG
     - Fallback ID
     - Fallback SG
     url: http://www.gstatic.com/generate_204
@@ -324,7 +324,7 @@ proxy-groups:
     - Balance ID
     - Balance SG
     - Ping ID
-    - PIng SG
+    - Ping SG
     - Fallback ID
     - Fallback SG
     - TrafficDirect
@@ -339,7 +339,7 @@ proxy-groups:
     - Balance ID
     - Balance SG
     - Ping ID
-    - PIng SG
+    - Ping SG
     - Fallback ID
     - Fallback SG
     - TrafficDirect
@@ -354,7 +354,7 @@ proxy-groups:
     - Balance ID
     - Balance SG
     - Ping ID
-    - PIng SG
+    - Ping SG
     - Fallback ID
     - Fallback SG
     - TrafficDirect
