@@ -276,7 +276,6 @@ proxy-groups:
     - Ping SG
     - Fallback ID
     - Fallback SG
-    - General Ping
     
   - name: TrafficAds
     type: select
