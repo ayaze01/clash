@@ -216,6 +216,8 @@ proxy-groups:
     proxies:
     - Route ID
     - Route SG
+    - Fallback ID
+    - Fallback SG
     - Plain
     url: http://www.gstatic.com/generate_204
     interval: '30'
@@ -233,8 +235,8 @@ proxy-groups:
     type: fallback
     lazy: true
     disable-udp: false
-    proxies:
-    - Route ID
+    use:
+    - VIP-ID
     url: http://www.gstatic.com/generate_204
     interval: '30'
 
@@ -242,8 +244,8 @@ proxy-groups:
     type: fallback
     lazy: true
     disable-udp: false
-    proxies:
-    - Route SG
+    use:
+    - VIP-SG
     url: http://www.gstatic.com/generate_204
     interval: '30'
 
@@ -254,6 +256,8 @@ proxy-groups:
     - REJECT
     - Route ID
     - Route SG
+    - Fallback ID
+    - Fallback SG
     
   - name: TrafficPorn
     type: select
@@ -262,6 +266,8 @@ proxy-groups:
     - REJECT
     - Route ID
     - Route SG
+    - Fallback ID
+    - Fallback SG
 
 proxy-providers:
   VIP-ID:
