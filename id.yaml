@@ -1,28 +1,28 @@
 proxies:
 #VMESS-WS-SSL-SNI
 #VMESS-WS-SSL-CDN
-- name: "VM ID-INFY WS-SSL-CDN"
+- name: "VM ID-BIZ WS-SSL-CDN"
   type: vmess
   server: 104.17.3.81
   port: 443
-  uuid: 2a0c40ce-a541-4afb-a3f9-baf3614de603
+  uuid: xx
   alterId: 0
   cipher: auto
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: id-06v2.cemilan-vpn.my.id
+  servername: id-01.cemilan-vpn.my.id
   network: ws
   ws-opts:
     path: /vmess
     headers:
-      Host: id-06v2.cemilan-vpn.my.id
+      Host: id-01.cemilan-vpn.my.id
 
 - name: "VM ID-IKD WS-SSL-CDN"
   type: vmess
   server: 104.17.3.81
   port: 443
-  uuid: 1833649a-7a01-4e2b-984d-29a45002f41b
+  uuid: 06eb3154-be1d-4f19-bd83-40c193b6c503
   alterId: 0
   cipher: auto
   udp: true
@@ -31,21 +31,37 @@ proxies:
   servername: id-ikdv2.cemilan-vpn.my.id
   network: ws
   ws-opts:
-    path: /vmessws
+    path: /vmess
     headers:
       Host: id-ikdv2.cemilan-vpn.my.id
 
-#VMESS-WS-CDN
-- name: "VM ID-INFY WS-CDN"
+- name: "VM ID-APIK WS-SSL-CDN"
   type: vmess
   server: 104.17.3.81
-  port: 80
-  uuid: 2a0c40ce-a541-4afb-a3f9-baf3614de603
+  port: 443
+  uuid: 789f3ab5-c226-41f9-bdd6-536661e954a9
   alterId: 0
   cipher: auto
   udp: true
-  tls: false
-  skip-cert-verify: false
+  tls: true
+  skip-cert-verify: true
+  servername: id-apikv2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id-apikv2.cemilan-vpn.my.id
+
+- name: "VM ID-INFY WS-SSL-CDN"
+  type: vmess
+  server: 104.17.3.81
+  port: 443
+  uuid: 97896824-4ced-4e31-8c23-c7bedadf4a20
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
   servername: id-06v2.cemilan-vpn.my.id
   network: ws
   ws-opts:
@@ -53,28 +69,29 @@ proxies:
     headers:
       Host: id-06v2.cemilan-vpn.my.id
 
-- name: "VM ID-IKD WS-CDN"
+- name: "VM ID-IDC WS-SSL-CDN"
   type: vmess
   server: 104.17.3.81
-  port: 80
-  uuid: 1833649a-7a01-4e2b-984d-29a45002f41b
+  port: 443
+  uuid: 2acdd454-d85e-49a8-be61-29a2bd98d6aa
   alterId: 0
   cipher: auto
   udp: true
-  tls: false
-  skip-cert-verify: false
-  servername: id-ikdv2.cemilan-vpn.my.id
+  tls: true
+  skip-cert-verify: true
+  servername: id-05v2.cemilan-vpn.my.id
   network: ws
   ws-opts:
-    path: /vmessws
+    path: /vmess
     headers:
-      Host: id-ikdv2.cemilan-vpn.my.id
+      Host: id-05v2.cemilan-vpn.my.id
 
-- name: "VM ID-BIZNET WS-CDN"
+#VMESS-WS-CDN
+- name: "VM ID-BIZ WS-CDN"
   type: vmess
   server: 104.17.3.81
   port: 80
-  uuid: d6ce960f-23cc-412b-8a1a-4aa173892ec4
+  uuid: 50686818-386e-4f2c-8174-0789245748fc
   alterId: 0
   cipher: auto
   udp: true
@@ -87,28 +104,96 @@ proxies:
     headers:
       Host: id-01.cemilan-vpn.my.id
 
+- name: "VM ID-IKD WS-CDN"
+  type: vmess
+  server: 104.17.3.81
+  port: 80
+  uuid: 06eb3154-be1d-4f19-bd83-40c193b6c503
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: false
+  servername: id-ikdv2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id-ikdv2.cemilan-vpn.my.id
+
+- name: "VM ID-APIK WS-CDN"
+  type: vmess
+  server: 104.17.3.81
+  port: 80
+  uuid: 789f3ab5-c226-41f9-bdd6-536661e954a9
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: false
+  servername: id-apikv2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id-apikv2.cemilan-vpn.my.id
+
+- name: "VM ID-INFY WS-CDN"
+  type: vmess
+  server: 104.17.3.81
+  port: 80
+  uuid: 97896824-4ced-4e31-8c23-c7bedadf4a20
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: false
+  servername: id-06v2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id-06v2.cemilan-vpn.my.id
+
+- name: "VM ID-IDC WS-CDN"
+  type: vmess
+  server: 104.17.3.81
+  port: 80
+  uuid: 2acdd454-d85e-49a8-be61-29a2bd98d6aa
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: false
+  servername: id-05v2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id-05v2.cemilan-vpn.my.id
+
 #VMESS-GRPC-SNI
 #VMESS-GRPC-CDN
-- name: "VM ID-INFY GRPC-CDN"
+- name: "VM ID-BIZ GRPC-CDN"
+  type: vmess
   server: 104.17.3.81
   port: 443
-  type: vmess
-  uuid: 2a0c40ce-a541-4afb-a3f9-baf3614de603
+  uuid: xx
   alterId: 0
   cipher: auto
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: id-06v2.cemilan-vpn.my.id
+  servername: id-01.cemilan-vpn.my.id
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
 
 - name: "VM ID-IKD GRPC-CDN"
+  type: vmess
   server: 104.17.3.81
   port: 443
-  type: vmess
-  uuid: acc1e1cc-b005-4dba-8d8f-91ac7c9a3f36
+  uuid: 27cb05d8-6f47-4173-9e98-e5cf7fb6ee32
   alterId: 0
   cipher: auto
   udp: true
@@ -119,30 +204,75 @@ proxies:
   grpc-opts:
     grpc-service-name: vmessgrpc
 
-#VLESS-UNSUPPORTED
-
-#TROJAN-WS-SNI
-#TROJAN-WS-CDN
-- name: "TR ID-INFY WS-CDN"
+- name: "VM ID-APIK GRPC-CDN"
+  type: vmess
   server: 104.17.3.81
   port: 443
-  type: trojan
-  password: 9e1a5cff-d220-486e-bb7e-7890dc0bc65b
+  uuid: 3a0b738e-f9b6-4421-b783-aaaa65db6e3b
+  alterId: 0
+  cipher: auto
   udp: true
   tls: true
   skip-cert-verify: true
-  sni: id-06v2.cemilan-vpn.my.id
+  servername: id-apikv2.cemilan-vpn.my.id
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmessgrpc
+
+- name: "VM ID-INFY GRPC-CDN"
+  type: vmess
+  server: 104.17.3.81
+  port: 443
+  uuid: 97896824-4ced-4e31-8c23-c7bedadf4a20
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: id-06v2.cemilan-vpn.my.id
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+
+- name: "VM ID-IDC GRPC-CDN"
+  type: vmess
+  server: 104.17.3.81
+  port: 443
+  uuid: 2acdd454-d85e-49a8-be61-29a2bd98d6aa
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: id-05v2.cemilan-vpn.my.id
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+
+#VLESS-UNSUPPORTED
+
+#TROJAN-WS-SNI
+#TROJAN WS-CDN
+- name: "TR ID-BIZ WS-CDN"
+  type: trojan
+  server: 104.17.3.81
+  port: 443
+  uuid: xx
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  sni: id-01.cemilan-vpn.my.id
   network: ws
   ws-opts:
     path: /trojan-ws
     headers:
-        Host: id-06v2.cemilan-vpn.my.id
+      Host: id-01.cemilan-vpn.my.id
 
 - name: "TR ID-IKD WS-CDN"
+  type: trojan
   server: 104.17.3.81
   port: 443
-  type: trojan
-  password: b7dcd1a9-6629-4218-8c2f-472ced00f9f6
+  uuid: 26995653-705a-493f-84fc-98d8aebfd2db
   udp: true
   tls: true
   skip-cert-verify: true
@@ -151,15 +281,99 @@ proxies:
   ws-opts:
     path: /trojanws
     headers:
-        Host: id-ikdv2.cemilan-vpn.my.id
+      Host: id-ikdv2.cemilan-vpn.my.id
 
-#TROJAN-GRPC-SNI
-#TROJAN-GRPC-CDN
-- name: "TR ID-INFY GRPC-CDN"
+- name: "TR ID-APIK WS-CDN"
+  type: trojan
   server: 104.17.3.81
   port: 443
+  uuid: ed923e75-a040-4df4-abea-fb7da0f5cb03
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  sni: id-apikv2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /trojanws
+    headers:
+      Host: id-apikv2.cemilan-vpn.my.id
+
+- name: "TR ID-INFY WS-CDN"
   type: trojan
-  password: 9e1a5cff-d220-486e-bb7e-7890dc0bc65b
+  server: 104.17.3.81
+  port: 443
+  uuid: 704e4ca2-b6a0-4854-bc4d-5995342556f1
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  sni: id-06v2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /trojan-ws
+    headers:
+      Host: id-06v2.cemilan-vpn.my.id
+
+- name: "TR ID-IDC WS-CDN"
+  type: trojan
+  server: 104.17.3.81
+  port: 443
+  uuid: 5d7ac98c-6100-48dd-b4ae-7964627d443d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  sni: id-05v2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /trojan-ws
+    headers:
+      Host: id-05v2.cemilan-vpn.my.id
+
+#TROJAN-GRPC-SNI
+#TROJAN GRPC-CDN
+- name: "TR ID-BIZ GRPC-CDN"
+  type: trojan
+  server: 104.17.3.81
+  port: 443
+  uuid: xx
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  sni: id-01.cemilan-vpn.my.id
+  network: grpc
+  grpc-opts:
+    grpc-service-name: trojan-grpc
+
+- name: "TR ID-IKD GRPC-CDN"
+  type: trojan
+  server: 104.17.3.81
+  port: 443
+  uuid: 49f5848e-3278-479c-91fa-3a258add9ff9
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  sni: id-ikdv2.cemilan-vpn.my.id
+  network: grpc
+  grpc-opts:
+    grpc-service-name: trojangrpc
+
+- name: "TR ID-APIK GRPC-CDN"
+  type: trojan
+  server: 104.17.3.81
+  port: 443
+  uuid: ee198d0a-ac58-4f7b-a7a5-957bc7f7f35e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  sni: id-apikv2.cemilan-vpn.my.id
+  network: grpc
+  grpc-opts:
+    grpc-service-name: trojangrpc
+
+- name: "TR ID-INFY GRPC-CDN"
+  type: trojan
+  server: 104.17.3.81
+  port: 443
+  uuid: 704e4ca2-b6a0-4854-bc4d-5995342556f1
   udp: true
   tls: true
   skip-cert-verify: true
@@ -168,18 +382,19 @@ proxies:
   grpc-opts:
     grpc-service-name: trojan-grpc
 
-- name: "TR ID-IKD GRPC-CDN"
+- name: "TR ID-IDC GRPC-CDN"
+  type: trojan
   server: 104.17.3.81
   port: 443
-  type: trojan
-  password: a87d5aa3-35fa-4352-9d87-1025805169b7
+  uuid: 5d7ac98c-6100-48dd-b4ae-7964627d443d
   udp: true
   tls: true
   skip-cert-verify: true
-  sni: id-ikdv2.cemilan-vpn.my.id
+  sni: id-05v2.cemilan-vpn.my.id
   network: grpc
   grpc-opts:
     grpc-service-name: trojan-grpc
+
 
 #SS-WSCDN
 - name: "SS ID-INFY WS-CDN"
