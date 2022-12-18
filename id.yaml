@@ -28,7 +28,7 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: false
-  servername: id-06v2.cemilan-vpn.my.id
+  #servername: id-06v2.cemilan-vpn.my.id
   network: ws
   ws-opts:
     path: /vmess
