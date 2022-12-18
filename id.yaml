@@ -1,7 +1,7 @@
 proxies:
 #VMESS-WS-SSL-SNI
 #VMESS-WS-SSL-CDN
-- name: "VM ID-INFINYS WS-SSL-CDN"
+- name: "VM ID-INFY WS-SSL-CDN"
   type: vmess
   server: 104.17.3.81
   port: 443
@@ -19,7 +19,7 @@ proxies:
       Host: id-06v2.cemilan-vpn.my.id
 
 #VMESS-WS-CDN
-- name: "VM ID-INFINYS WS-CDN"
+- name: "VM ID-INFY WS-CDN"
   type: vmess
   server: 104.17.3.81
   port: 80
@@ -36,9 +36,26 @@ proxies:
     headers:
       Host: id-06v2.cemilan-vpn.my.id
 
+- name: "VM ID-BIZNET WS-CDN"
+  type: vmess
+  server: 104.17.3.81
+  port: 80
+  uuid: d6ce960f-23cc-412b-8a1a-4aa173892ec4
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: false
+  servername: id-01.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /v2ray
+    headers:
+      Host: id-01.cemilan-vpn.my.id
+
 #VMESS-GRPC-SNI
 #VMESS-GRPC-CDN
-- name: "VM ID-INFINYS GRPC-CDN"
+- name: "VM ID-INFY GRPC-CDN"
   server: 104.17.3.81
   port: 443
   type: vmess
@@ -57,7 +74,7 @@ proxies:
 
 #TROJAN-WS-SNI
 #TROJAN-WS-CDN
-- name: "TR ID-INFINYS WS-CDN"
+- name: "TR ID-INFY WS-CDN"
   server: 104.17.3.81
   port: 443
   type: trojan
@@ -74,7 +91,7 @@ proxies:
 
 #TROJAN-GRPC-SNI
 #TROJAN-GRPC-CDN
-- name: "TR ID-INFINYS GRPC-CDN"
+- name: "TR ID-INFY GRPC-CDN"
   server: 104.17.3.81
   port: 443
   type: trojan
@@ -88,11 +105,11 @@ proxies:
     grpc-service-name: trojan-grpc
 
 #SS-WSCDN
-- name: "SS ID-INFINYS WS-CDN"
+- name: "SS ID-INFY WS-CDN"
   type: ss
   server: 104.17.3.81
   port: 443
-  cipher: aes-128-gcm
+  method: aes-128-gcm
   password: 8c122fd9-2f47-4c1d-916d-7879772cbd01
   udp: true
   tls: true
@@ -105,7 +122,7 @@ proxies:
         Host: id-06v2.cemilan-vpn.my.id
 
 #SS-GRPC-CDN
-- name: "SS ID-INFINYS GRPC-CDN"
+- name: "SS ID-INFY GRPC-CDN"
   type: ss
   server: 104.17.3.81
   port: 443
