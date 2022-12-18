@@ -74,3 +74,63 @@ proxies:
       Host: id-05v2.cemilan-vpn.my.id
     max-early-data: 2048
     early-data-header-name: Sec-WebSocket-Protocol
+
+#VMESS-WS-SSL-SNI
+#VMESS-WS-SSL-CDN
+- name: VM ID-INFINYS WS-SSL-CDN
+  type: vmess
+  server: 104.17.3.81
+  port: 443
+  uuid: 2a0c40ce-a541-4afb-a3f9-baf3614de603
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: id-06v2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id-06v2.cemilan-vpn.my.id
+#VMESS-WS-CDN
+- name: VM ID-INFINYS WS-CDN
+  type: vmess
+  server: 104.17.3.81
+  port: 80
+  uuid: 2a0c40ce-a541-4afb-a3f9-baf3614de603
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  servername: id-06v2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id-06v2.cemilan-vpn.my.id
+#VMESS-GRPC-SNI
+#VMESS-GRPC-CDN
+- name: VM ID-INFINYS GRPC-CDN
+  server: 104.17.3.81
+  port: 443
+  type: vmess
+  uuid: 2a0c40ce-a541-4afb-a3f9-baf3614de603
+  alterId: 0
+  cipher: auto
+  network: grpc
+  tls: true
+  skip-cert-verify: true
+  servername: id-06v2.cemilan-vpn.my.id
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+
+#VLESS-WS-SSL-SNI
+#VLESS-WS-SSL-CDN
+#VLESS-WS-CDN
+#VLESS-GRPC-SNI
+#VLESS-GRPC-CDN
+
+#TROJAN-GRPC-SNI
+#TROJAN-GRPC-CDN
