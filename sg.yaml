@@ -65,7 +65,7 @@ proxies:
   servername: sg-ovhv2.cemilan-vpn.my.id
   network: ws
   ws-opts:
-    path: /vmess
+    path: /vmessws
     headers:
       Host: sg-ovhv2.cemilan-vpn.my.id
 
@@ -140,7 +140,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  sni: sg-014v2.cemilan-vpn.my.id
+  sni: sg-04v2.cemilan-vpn.my.id
   network: grpc
   grpc-opts:
     grpc-service-name: trojan-grpc
