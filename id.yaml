@@ -85,7 +85,7 @@ proxies:
   alterId: 0
   cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: id-06v2.cemilan-vpn.my.id
   network: ws
@@ -120,7 +120,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: grpc
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: id-06v2.cemilan-vpn.my.id
   grpc-opts:
