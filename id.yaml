@@ -77,7 +77,7 @@ proxies:
 
 #VMESS-WS-SSL-SNI
 #VMESS-WS-SSL-CDN
-- name: VM ID-INFINYS WS-SSL-CDN
+- name: "VM ID-INFINYS WS-SSL-CDN"
   type: vmess
   server: 104.17.3.81
   port: 443
@@ -94,7 +94,7 @@ proxies:
     headers:
       Host: id-06v2.cemilan-vpn.my.id
 #VMESS-WS-CDN
-- name: VM ID-INFINYS WS-CDN
+- name: "VM ID-INFINYS WS-CDN"
   type: vmess
   server: 104.17.3.81
   port: 80
@@ -112,7 +112,7 @@ proxies:
       Host: id-06v2.cemilan-vpn.my.id
 #VMESS-GRPC-SNI
 #VMESS-GRPC-CDN
-- name: VM ID-INFINYS GRPC-CDN
+- name: "VM ID-INFINYS GRPC-CDN"
   server: 104.17.3.81
   port: 443
   type: vmess
