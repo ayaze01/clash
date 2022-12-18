@@ -52,25 +52,6 @@ proxies:
   grpc-opts:
     grpc-service-name: vmess-grpc
 
-#VLESS-WS-SSL-SNI
-#VLESS-WS-SSL-CDN
-- name: "VL ID-INFINYS WS-SSL-CDN"
-  type: vless
-  server: 104.17.3.81
-  port: 443
-  uuid: 067e0784-adc9-480a-8b08-0de3e96afbde
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: id-06v2.cemilan-vpn.my.id
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: id-06v2.cemilan-vpn.my.id
-
 #TROJAN-WS-SNI
 #TROJAN-WS-CDN
 - name: "TR ID-INFINYS WS-CDN"
