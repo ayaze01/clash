@@ -53,6 +53,8 @@ proxies:
   grpc-opts:
     grpc-service-name: vmess-grpc
 
+#VLESS-UNSUPPORTED
+
 #TROJAN-WS-SNI
 #TROJAN-WS-CDN
 - name: "TR ID-INFINYS WS-CDN"
@@ -72,3 +74,15 @@ proxies:
 
 #TROJAN-GRPC-SNI
 #TROJAN-GRPC-CDN
+- name: "TR ID-INFINYS GRPC-CDN"
+  server: 104.17.3.81
+  port: 443
+  type: trojan
+  password: 9e1a5cff-d220-486e-bb7e-7890dc0bc65b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  sni: id-06v2.cemilan-vpn.my.id
+  network: grpc
+  grpc-opts:
+    grpc-service-name: trojan-grpc
