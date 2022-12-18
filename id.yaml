@@ -71,40 +71,6 @@ proxies:
     headers:
       Host: id-06v2.cemilan-vpn.my.id
 
-#VLESS-WS-CDN
-- name: "VL ID-INFINYS WS-CDN"
-  type: vless
-  server: 104.17.3.81
-  port: 80
-  uuid: 067e0784-adc9-480a-8b08-0de3e96afbde
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: false
-  servername: id-06v2.cemilan-vpn.my.id
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: id-06v2.cemilan-vpn.my.id
-
-#VLESS-GRPC-SNI
-#VLESS-GRPC-CDN
-- name: "VL ID-INFINYS GRPC-CDN"
-  server: 104.17.3.81
-  port: 443
-  type: vless
-  uuid: 067e0784-adc9-480a-8b08-0de3e96afbde
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: id-06v2.cemilan-vpn.my.id
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless-grpc
-
 #TROJAN-WS-SNI
 #TROJAN-WS-CDN
 - name: "TR ID-INFINYS WS-CDN"
