@@ -1,0 +1,85 @@
+#VMESS-WS-CDN
+- name: "VM ID-BIZ WS-CDN"
+  type: vmess
+  server: 104.17.3.81
+  port: 80
+  uuid: 50686818-386e-4f2c-8174-0789245748fc
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: false
+  servername: id-01.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /v2ray
+    headers:
+      Host: id-01.cemilan-vpn.my.id
+
+- name: "VM ID-IKD WS-CDN"
+  type: vmess
+  server: 104.17.3.81
+  port: 80
+  uuid: 06eb3154-be1d-4f19-bd83-40c193b6c503
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: false
+  servername: id-ikdv2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id-ikdv2.cemilan-vpn.my.id
+
+- name: "VM ID-APIK WS-CDN"
+  type: vmess
+  server: 104.17.3.81
+  port: 80
+  uuid: 789f3ab5-c226-41f9-bdd6-536661e954a9
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: false
+  servername: id-apikv2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id-apikv2.cemilan-vpn.my.id
+
+- name: "VM ID-INFY WS-CDN"
+  type: vmess
+  server: 104.17.3.81
+  port: 80
+  uuid: 97896824-4ced-4e31-8c23-c7bedadf4a20
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: false
+  servername: id-06v2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id-06v2.cemilan-vpn.my.id
+
+- name: "VM ID-IDC WS-CDN"
+  type: vmess
+  server: 104.17.3.81
+  port: 80
+  uuid: 2acdd454-d85e-49a8-be61-29a2bd98d6aa
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: false
+  servername: id-05v2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id-05v2.cemilan-vpn.my.id

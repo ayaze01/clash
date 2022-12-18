@@ -1,0 +1,34 @@
+#VMESS-WS-SSL-CDN
+- name: "VM SG-DO WS-SSL-CDN"
+  type: vmess
+  server: 104.17.3.81
+  port: 443
+  uuid: f865fb7d-4f09-44be-a686-6f110a13d028
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: sg-04v2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: sg-04v2.cemilan-vpn.my.id
+
+- name: "VM SG-OVH WS-SSL-CDN"
+  type: vmess
+  server: 104.17.3.81
+  port: 443
+  uuid: a1803b62-a6c7-4e41-bef4-21bea950a49a
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: sg-ovhv2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: sg-ovhv2.cemilan-vpn.my.id

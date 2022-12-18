@@ -1,0 +1,26 @@
+#TROJAN GRPC-CDN
+- name: "TR SG-DO GRPC-CDN"
+  type: trojan
+  server: 104.17.3.81
+  port: 443
+  uuid: e8d140ff-ab9b-4383-8420-636ff42c7058
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  sni: sg-014v2.cemilan-vpn.my.id
+  network: grpc
+  grpc-opts:
+    grpc-service-name: trojan-grpc
+
+- name: "TR SG-OVH GRPC-CDN"
+  type: trojan
+  server: 104.17.3.81
+  port: 443
+  uuid: 598ddd73-5ee3-47d0-93a6-a1c9d2a7131d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  sni: sg-ovhv2.cemilan-vpn.my.id
+  network: grpc
+  grpc-opts:
+    grpc-service-name: trojangrpc

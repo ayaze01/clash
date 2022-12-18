@@ -1,0 +1,30 @@
+#VMESS-GRPC-CDN
+- name: "VM SG-DO GRPC-CDN"
+  type: vmess
+  server: 104.17.3.81
+  port: 443
+  uuid: f865fb7d-4f09-44be-a686-6f110a13d028
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: sg-04v2.cemilan-vpn.my.id
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+
+- name: "VM SG-OVH GRPC-CDN"
+  type: vmess
+  server: 104.17.3.81
+  port: 443
+  uuid: 1b2a2cfc-b1b5-4a98-8ead-1b21530f2594
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: sg-ovhv2.cemilan-vpn.my.id
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmessgrpc

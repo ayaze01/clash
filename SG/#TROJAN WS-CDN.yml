@@ -1,0 +1,30 @@
+#TROJAN WS-CDN
+- name: "TR SG-DO WS-CDN"
+  type: trojan
+  server: 104.17.3.81
+  port: 443
+  uuid: e8d140ff-ab9b-4383-8420-636ff42c7058
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  sni: sg-04v2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /trojan-ws
+    headers:
+      Host: sg-04v2.cemilan-vpn.my.id
+
+- name: "TR SG-OVH WS-CDN"
+  type: trojan
+  server: 104.17.3.81
+  port: 443
+  uuid: 2076b045-c577-4e7a-849e-201478424706
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  sni: sg-ovhv2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /trojanws
+    headers:
+      Host: sg-ovhv2.cemilan-vpn.my.id
