@@ -99,7 +99,7 @@ proxies:
   servername: id-ikdv2.cemilan-vpn.my.id
   network: ws
   ws-opts:
-    path: /vmess
+    path: /vmessws
     headers:
       Host: id-ikdv2.cemilan-vpn.my.id
 
@@ -116,7 +116,7 @@ proxies:
   servername: id-apikv2.cemilan-vpn.my.id
   network: ws
   ws-opts:
-    path: /vmess
+    path: /vmessws
     headers:
       Host: id-apikv2.cemilan-vpn.my.id
 
