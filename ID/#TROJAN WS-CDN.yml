@@ -3,7 +3,7 @@
   type: trojan
   server: 104.17.3.81
   port: 443
-  uuid: xx
+  password: xx
   udp: true
   tls: true
   skip-cert-verify: true
@@ -18,7 +18,7 @@
   type: trojan
   server: 104.17.3.81
   port: 443
-  uuid: 26995653-705a-493f-84fc-98d8aebfd2db
+  password: 26995653-705a-493f-84fc-98d8aebfd2db
   udp: true
   tls: true
   skip-cert-verify: true
@@ -33,7 +33,7 @@
   type: trojan
   server: 104.17.3.81
   port: 443
-  uuid: ed923e75-a040-4df4-abea-fb7da0f5cb03
+  password: ed923e75-a040-4df4-abea-fb7da0f5cb03
   udp: true
   tls: true
   skip-cert-verify: true
@@ -48,7 +48,7 @@
   type: trojan
   server: 104.17.3.81
   port: 443
-  uuid: 704e4ca2-b6a0-4854-bc4d-5995342556f1
+  password: 704e4ca2-b6a0-4854-bc4d-5995342556f1
   udp: true
   tls: true
   skip-cert-verify: true
@@ -63,7 +63,7 @@
   type: trojan
   server: 104.17.3.81
   port: 443
-  uuid: 5d7ac98c-6100-48dd-b4ae-7964627d443d
+  password: 5d7ac98c-6100-48dd-b4ae-7964627d443d
   udp: true
   tls: true
   skip-cert-verify: true
