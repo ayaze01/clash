@@ -10,7 +10,7 @@ proxies:
   cipher: auto
   udp: true
   tls: true
-  skip-cert-verify: true
+  skip-cert-verify: false
   servername: id-06v2.cemilan-vpn.my.id
   network: ws
   ws-opts:
@@ -27,7 +27,7 @@ proxies:
   cipher: auto
   udp: true
   tls: true
-  skip-cert-verify: true
+  skip-cert-verify: false
   servername: id-06v2.cemilan-vpn.my.id
   network: ws
   ws-opts:
@@ -45,7 +45,7 @@ proxies:
   cipher: auto
   network: grpc
   tls: true
-  skip-cert-verify: true
+  skip-cert-verify: false
   servername: id-06v2.cemilan-vpn.my.id
   grpc-opts:
     grpc-service-name: vmess-grpc
