@@ -26,7 +26,7 @@ proxies:
   alterId: 0
   cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: false
   servername: id-06v2.cemilan-vpn.my.id
   network: ws
