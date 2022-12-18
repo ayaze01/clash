@@ -45,6 +45,7 @@ proxies:
   uuid: 2a0c40ce-a541-4afb-a3f9-baf3614de603
   alterId: 0
   cipher: auto
+  udp: true
   tls: true
   skip-cert-verify: true
   servername: id-06v2.cemilan-vpn.my.id
@@ -60,6 +61,7 @@ proxies:
   type: trojan
   password: 9e1a5cff-d220-486e-bb7e-7890dc0bc65b
   udp: true
+  tls: true
   skip-cert-verify: true
   sni: id-06v2.cemilan-vpn.my.id
   network: ws
