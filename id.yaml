@@ -86,3 +86,21 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: trojan-grpc
+
+#SS-WS
+- name: "SS ID-INFINYS WS-CDN"
+  type: ss
+  server: 104.17.3.81
+  port: 443
+  cipher: aes-128-gcm
+  password: 8c122fd9-2f47-4c1d-916d-7879772cbd01
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  sni: id-06v2.cemilan-vpn.my.id
+  plugin: v2ray-plugin
+  plugin-opts:
+    mode: websocket
+    path: /ss-ws
+    headers:
+        Host: id-06v2.cemilan-vpn.my.id
