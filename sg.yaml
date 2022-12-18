@@ -105,7 +105,7 @@ proxies:
   type: trojan
   server: 104.17.3.81
   port: 443
-  uuid: e8d140ff-ab9b-4383-8420-636ff42c7058
+  password: e8d140ff-ab9b-4383-8420-636ff42c7058
   udp: true
   tls: true
   skip-cert-verify: true
@@ -120,7 +120,7 @@ proxies:
   type: trojan
   server: 104.17.3.81
   port: 443
-  uuid: 2076b045-c577-4e7a-849e-201478424706
+  password: 2076b045-c577-4e7a-849e-201478424706
   udp: true
   tls: true
   skip-cert-verify: true
@@ -136,7 +136,7 @@ proxies:
   type: trojan
   server: 104.17.3.81
   port: 443
-  uuid: e8d140ff-ab9b-4383-8420-636ff42c7058
+  password: e8d140ff-ab9b-4383-8420-636ff42c7058
   udp: true
   tls: true
   skip-cert-verify: true
@@ -149,7 +149,7 @@ proxies:
   type: trojan
   server: 104.17.3.81
   port: 443
-  uuid: 598ddd73-5ee3-47d0-93a6-a1c9d2a7131d
+  password: 598ddd73-5ee3-47d0-93a6-a1c9d2a7131d
   udp: true
   tls: true
   skip-cert-verify: true
