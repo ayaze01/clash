@@ -18,6 +18,23 @@ proxies:
     headers:
       Host: id-06v2.cemilan-vpn.my.id
 
+- name: "VM ID-IKD WS-SSL-CDN"
+  type: vmess
+  server: 104.17.3.81
+  port: 443
+  uuid: 1833649a-7a01-4e2b-984d-29a45002f41b
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: id-ikdv2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /vmessws
+    headers:
+      Host: id-ikdv2.cemilan-vpn.my.id
+
 #VMESS-WS-CDN
 - name: "VM ID-INFY WS-CDN"
   type: vmess
@@ -35,6 +52,23 @@ proxies:
     path: /vmess
     headers:
       Host: id-06v2.cemilan-vpn.my.id
+
+- name: "VM ID-IKD WS-CDN"
+  type: vmess
+  server: 104.17.3.81
+  port: 80
+  uuid: 1833649a-7a01-4e2b-984d-29a45002f41b
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: false
+  servername: id-ikdv2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /vmessws
+    headers:
+      Host: id-ikdv2.cemilan-vpn.my.id
 
 - name: "VM ID-BIZNET WS-CDN"
   type: vmess
@@ -70,6 +104,21 @@ proxies:
   grpc-opts:
     grpc-service-name: vmess-grpc
 
+- name: "VM ID-IKD GRPC-CDN"
+  server: 104.17.3.81
+  port: 443
+  type: vmess
+  uuid: acc1e1cc-b005-4dba-8d8f-91ac7c9a3f36
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: id-ikdv2.cemilan-vpn.my.id
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmessgrpc
+
 #VLESS-UNSUPPORTED
 
 #TROJAN-WS-SNI
@@ -89,6 +138,21 @@ proxies:
     headers:
         Host: id-06v2.cemilan-vpn.my.id
 
+- name: "TR ID-IKD WS-CDN"
+  server: 104.17.3.81
+  port: 443
+  type: trojan
+  password: b7dcd1a9-6629-4218-8c2f-472ced00f9f6
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  sni: id-ikdv2.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /trojanws
+    headers:
+        Host: id-ikdv2.cemilan-vpn.my.id
+
 #TROJAN-GRPC-SNI
 #TROJAN-GRPC-CDN
 - name: "TR ID-INFY GRPC-CDN"
@@ -100,6 +164,19 @@ proxies:
   tls: true
   skip-cert-verify: true
   sni: id-06v2.cemilan-vpn.my.id
+  network: grpc
+  grpc-opts:
+    grpc-service-name: trojan-grpc
+
+- name: "TR ID-IKD GRPC-CDN"
+  server: 104.17.3.81
+  port: 443
+  type: trojan
+  password: a87d5aa3-35fa-4352-9d87-1025805169b7
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  sni: id-ikdv2.cemilan-vpn.my.id
   network: grpc
   grpc-opts:
     grpc-service-name: trojan-grpc
