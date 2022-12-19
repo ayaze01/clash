@@ -245,6 +245,36 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: '30'
 
+  - name: General Balance
+    type: load-balance
+    strategy: round-robin
+    disable-udp: false
+    use:
+      - VIP-ID
+      - VIP-SG
+    url: http://www.gstatic.com/generate_204
+    interval: 360 
+
+  - name: General Ping
+    type: url-test
+    lazy: true
+    disable-udp: false
+    use:
+      - VIP-ID
+      - VIP-SG
+    url: http://www.gstatic.com/generate_204
+    interval: '30'
+
+  - name: General Fallback
+    type: fallback
+    lazy: true
+    disable-udp: false
+    use:
+      - VIP-ID
+      - VIP-SG
+    url: http://www.gstatic.com/generate_204
+    interval: '30'
+
   - name: TrafficDirect
     type: select
     disable-udp: false
@@ -255,6 +285,9 @@ proxy-groups:
     - Ping SG
     - Fallback ID
     - Fallback SG
+    - General Balance
+    - General Ping
+    - General Fallback
 
   - name: TrafficPortGames
     type: select
@@ -266,6 +299,9 @@ proxy-groups:
     - Ping SG
     - Fallback ID
     - Fallback SG
+    - General Balance
+    - General Ping
+    - General Fallback
 
   - name: TrafficGaming
     type: select
@@ -277,6 +313,9 @@ proxy-groups:
     - Ping SG
     - Fallback ID
     - Fallback SG
+    - General Balance
+    - General Ping
+    - General Fallback
 
   - name: TrafficAds
     type: select
@@ -289,6 +328,9 @@ proxy-groups:
     - Ping SG
     - Fallback ID
     - Fallback SG
+    - General Balance
+    - General Ping
+    - General Fallback
 
   - name: TrafficPorn
     type: select
@@ -301,6 +343,9 @@ proxy-groups:
     - Ping SG
     - Fallback ID
     - Fallback SG
+    - General Balance
+    - General Ping
+    - General Fallback
 
   - name: TrafficUmum
     type: fallback
@@ -313,6 +358,9 @@ proxy-groups:
     - Ping SG
     - Fallback ID
     - Fallback SG
+    - General Balance
+    - General Ping
+    - General Fallback
     url: http://www.gstatic.com/generate_204
     interval: '30'
 
