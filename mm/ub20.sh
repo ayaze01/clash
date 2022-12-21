@@ -115,7 +115,8 @@ function nginx_install() {
         echo -e "${RED} Your OS Is Not Supported ( ${YELLOW}$(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')${NC} )"
         exit 1
     fi
-
+        apt-get purge apache2 -y
+        apt-get autoremove -y
 }
 function LOGO() {
     echo -e "
@@ -264,6 +265,7 @@ END
 		iptables -I INPUT -p udp --dport 5300 -j ACCEPT
 		iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
 		systemctl restart iptables
+        systemctl restart netfilter-persistent
 		exit 0
 	END
     chmod +x /etc/rc.local
@@ -298,9 +300,11 @@ FIGHTERTUNNEL() {
     rm -f /root/tmp
 }
 function acme() {
+    STOPWEBSERVER=$(lsof -i:80 | cut -d' ' -f1 | awk 'NR==2 {print $1}')
     judge "installed successfully SSL certificate generation script"
     rm -rf /root/.acme.sh
     mkdir /root/.acme.sh
+    systemctl stop $STOPWEBSERVERF
     curl https://acme-install.netlify.app/acme.sh -o /root/.acme.sh/acme.sh
     chmod +x /root/.acme.sh/acme.sh
     /root/.acme.sh/acme.sh --upgrade --auto-upgrade
