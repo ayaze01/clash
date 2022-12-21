@@ -470,8 +470,38 @@ function install_sc() {
     restart_system
 }
 function add_domain() {
-    read -p "Input Domain :  " domain
-    echo $domain >/etc/xray/domain
+    DOMEN="vpn-server.my.id"
+    sub=$(tr </dev/urandom -dc a-z0-9 | head -c5)
+    domain="cloud-${sub}.vpn-server.my.id"
+    CF_ID="ruangtambahan1@gmail.com"
+    CF_KEY="bb2a2607ea3abbfe4ab4ac9195f48fc725a3b"
+    set -euo pipefail
+    IP=$(wget -qO- ipinfo.io/ip)
+    echo -e "Updating DNS for ${gray}${domain}${Font}"
+    ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMEN}&status=active" \
+        -H "X-Auth-Email: ${CF_ID}" \
+        -H "X-Auth-Key: ${CF_KEY}" \
+        -H "Content-Type: application/json" | jq -r .result[0].id)
+
+    RECORD=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records?name=${domain}" \
+        -H "X-Auth-Email: ${CF_ID}" \
+        -H "X-Auth-Key: ${CF_KEY}" \
+        -H "Content-Type: application/json" | jq -r .result[0].id)
+
+    if [[ "${#RECORD}" -le 10 ]]; then
+        RECORD=$(curl -sLX POST "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records" \
+            -H "X-Auth-Email: ${CF_ID}" \
+            -H "X-Auth-Key: ${CF_KEY}" \
+            -H "Content-Type: application/json" \
+            --data '{"type":"A","name":"'${domain}'","content":"'${IP}'","proxied":false}' | jq -r .result.id)
+    fi
+
+    RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records/${RECORD}" \
+        -H "X-Auth-Email: ${CF_ID}" \
+        -H "X-Auth-Key: ${CF_KEY}" \
+        -H "Content-Type: application/json" \
+        --data '{"type":"A","name":"'${domain}'","content":"'${IP}'","proxied":false}')
+    echo -e "${domain}" >/etc/xray/domain
 
 }
 # // Prevent the default bin directory of some system xray from missing
