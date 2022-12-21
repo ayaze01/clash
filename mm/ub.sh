@@ -473,7 +473,6 @@ function add_domain() {
     DOMEN="vpn-server.my.id"
     sub=$(tr </dev/urandom -dc a-z0-9 | head -c5)
     domain="cloud-${sub}.vpn-server.my.id"
-    echo -e "${domain}" >/etc/xray/domain
     CF_ID="ruangtambahan1@gmail.com"
     CF_KEY="bb2a2607ea3abbfe4ab4ac9195f48fc725a3b"
     set -euo pipefail
@@ -502,6 +501,7 @@ function add_domain() {
         -H "X-Auth-Key: ${CF_KEY}" \
         -H "Content-Type: application/json" \
         --data '{"type":"A","name":"'${domain}'","content":"'${IP}'","proxied":false}')
+    echo -e "${domain}" >/etc/xray/domain
 
 }
 # // Prevent the default bin directory of some system xray from missing
