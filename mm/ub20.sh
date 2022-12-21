@@ -238,7 +238,7 @@ END
     echo "*/1 * * * * root echo -n > /var/log/xray/access.log" >>/etc/cron.d/log.xray
     service cron restart
     cat >/home/daily_reboot <<-END
-		5
+		3
 	END
 
     cat >/etc/systemd/system/rc-local.service <<-END
