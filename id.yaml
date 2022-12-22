@@ -168,7 +168,7 @@ proxies:
   servername: id-ikdv2.cemilan-vpn.my.id
   network: grpc
   grpc-opts:
-    grpc-service-name: vmessgrpc
+    grpc-service-name: vmess-grpc
 
 - name: "VM ID-APIK GRPC-CDN"
   type: vmess
@@ -183,7 +183,7 @@ proxies:
   servername: id-apikv2.cemilan-vpn.my.id
   network: grpc
   grpc-opts:
-    grpc-service-name: vmessgrpc
+    grpc-service-name: vmess-grpc
 
 - name: "VM ID-INFY GRPC-CDN"
   type: vmess
@@ -288,7 +288,7 @@ proxies:
   sni: id-ikdv2.cemilan-vpn.my.id
   network: grpc
   grpc-opts:
-    grpc-service-name: trojangrpc
+    grpc-service-name: trojan-grpc
 
 - name: "TR ID-APIK GRPC-CDN"
   type: trojan
@@ -301,7 +301,7 @@ proxies:
   sni: id-apikv2.cemilan-vpn.my.id
   network: grpc
   grpc-opts:
-    grpc-service-name: trojangrpc
+    grpc-service-name: trojan-grpc
 
 - name: "TR ID-INFY GRPC-CDN"
   type: trojan
