@@ -1,0 +1,15 @@
+#!/bin/bash
+
+wget -O /usr/bin/add-ssh wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/add-ssh
+wget -O /usr/bin/add-ws wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/add-ws
+wget -O /usr/bin/add-vless wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/add-vless
+wget -O /usr/bin/add-tr wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/add-tr
+wget -O /usr/bin/add-ss wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/add-ss
+cd /usr/bin/
+chmod +x add-ssh
+chmod +x add-ws
+chmod +x add-vless
+chmod +x add-tr
+chmod +x add-ss
+cd
+exit
