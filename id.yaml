@@ -227,7 +227,7 @@ proxies:
   sni: id-ikdv2.cemilan-vpn.my.id
   network: ws
   ws-opts:
-    path: /trojanws
+    path: /trojan-ws
     headers:
       Host: id-ikdv2.cemilan-vpn.my.id
 
@@ -242,7 +242,7 @@ proxies:
   sni: id-apikv2.cemilan-vpn.my.id
   network: ws
   ws-opts:
-    path: /trojanws
+    path: /trojan-ws
     headers:
       Host: id-apikv2.cemilan-vpn.my.id
 
