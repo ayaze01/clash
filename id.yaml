@@ -10,12 +10,12 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: id-ikdv2.cemilan-vpn.my.id
+  servername: id-ikd.cemilan-vpn.my.id
   network: ws
   ws-opts:
     path: /vmess
     headers:
-      Host: id-ikdv2.cemilan-vpn.my.id
+      Host: id-ikd.cemilan-vpn.my.id
 
 - name: "VM ID-APIK WS-SSL-CDN"
   type: vmess
@@ -27,12 +27,12 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: id-apikv2.cemilan-vpn.my.id
+  servername: id-apik.cemilan-vpn.my.id
   network: ws
   ws-opts:
     path: /vmess
     headers:
-      Host: id-apikv2.cemilan-vpn.my.id
+      Host: id-apik.cemilan-vpn.my.id
 
 - name: "VM ID-INFY WS-SSL-CDN"
   type: vmess
@@ -44,12 +44,12 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: id-06v2.cemilan-vpn.my.id
+  servername: id-infy.cemilan-vpn.my.id
   network: ws
   ws-opts:
     path: /vmess
     headers:
-      Host: id-06v2.cemilan-vpn.my.id
+      Host: id-infy.cemilan-vpn.my.id
 
 - name: "VM ID-IDC WS-SSL-CDN"
   type: vmess
@@ -61,12 +61,12 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: id-05v2.cemilan-vpn.my.id
+  servername: id-idc.cemilan-vpn.my.id
   network: ws
   ws-opts:
     path: /vmess
     headers:
-      Host: id-05v2.cemilan-vpn.my.id
+      Host: id-idc.cemilan-vpn.my.id
 
 #VMESS-WS-CDN
 - name: "VM ID-BIZ WS-CDN"
@@ -79,12 +79,12 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: false
-  servername: id-01.cemilan-vpn.my.id
+  servername: id-biz.cemilan-vpn.my.id
   network: ws
   ws-opts:
     path: /v2ray
     headers:
-      Host: id-01.cemilan-vpn.my.id
+      Host: id-biz.cemilan-vpn.my.id
 
 - name: "VM ID-IKD WS-CDN"
   type: vmess
@@ -96,12 +96,12 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: false
-  servername: id-ikdv2.cemilan-vpn.my.id
+  servername: id-ikd.cemilan-vpn.my.id
   network: ws
   ws-opts:
     path: /vmessws
     headers:
-      Host: id-ikdv2.cemilan-vpn.my.id
+      Host: id-ikd.cemilan-vpn.my.id
 
 - name: "VM ID-APIK WS-CDN"
   type: vmess
@@ -113,12 +113,12 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: false
-  servername: id-apikv2.cemilan-vpn.my.id
+  servername: id-apik.cemilan-vpn.my.id
   network: ws
   ws-opts:
     path: /vmessws
     headers:
-      Host: id-apikv2.cemilan-vpn.my.id
+      Host: id-apik.cemilan-vpn.my.id
 
 - name: "VM ID-INFY WS-CDN"
   type: vmess
@@ -130,12 +130,12 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: false
-  servername: id-06v2.cemilan-vpn.my.id
+  servername: id-infy.cemilan-vpn.my.id
   network: ws
   ws-opts:
     path: /vmess
     headers:
-      Host: id-06v2.cemilan-vpn.my.id
+      Host: id-infy.cemilan-vpn.my.id
 
 - name: "VM ID-IDC WS-CDN"
   type: vmess
@@ -147,12 +147,12 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: false
-  servername: id-05v2.cemilan-vpn.my.id
+  servername: id-idc.cemilan-vpn.my.id
   network: ws
   ws-opts:
     path: /vmess
     headers:
-      Host: id-05v2.cemilan-vpn.my.id
+      Host: id-idc.cemilan-vpn.my.id
 
 #VMESS-GRPC-CDN
 - name: "VM ID-IKD GRPC-CDN"
@@ -165,7 +165,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: id-ikdv2.cemilan-vpn.my.id
+  servername: id-ikd.cemilan-vpn.my.id
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
@@ -180,7 +180,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: id-apikv2.cemilan-vpn.my.id
+  servername: id-apik.cemilan-vpn.my.id
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
@@ -195,7 +195,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: id-06v2.cemilan-vpn.my.id
+  servername: id-infy.cemilan-vpn.my.id
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
@@ -210,7 +210,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: id-05v2.cemilan-vpn.my.id
+  servername: id-idc.cemilan-vpn.my.id
   network: grpc
   grpc-opts:
     grpc-service-name: vmess-grpc
@@ -224,12 +224,12 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  sni: id-ikdv2.cemilan-vpn.my.id
+  sni: id-ikd.cemilan-vpn.my.id
   network: ws
   ws-opts:
     path: /trojan-ws
     headers:
-      Host: id-ikdv2.cemilan-vpn.my.id
+      Host: id-ikd.cemilan-vpn.my.id
 
 - name: "TR ID-APIK WS-CDN"
   type: trojan
@@ -239,12 +239,12 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  sni: id-apikv2.cemilan-vpn.my.id
+  sni: id-apik.cemilan-vpn.my.id
   network: ws
   ws-opts:
     path: /trojan-ws
     headers:
-      Host: id-apikv2.cemilan-vpn.my.id
+      Host: id-apik.cemilan-vpn.my.id
 
 - name: "TR ID-INFY WS-CDN"
   type: trojan
@@ -254,12 +254,12 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  sni: id-06v2.cemilan-vpn.my.id
+  sni: id-infy.cemilan-vpn.my.id
   network: ws
   ws-opts:
     path: /trojan-ws
     headers:
-      Host: id-06v2.cemilan-vpn.my.id
+      Host: id-infy.cemilan-vpn.my.id
 
 - name: "TR ID-IDC WS-CDN"
   type: trojan
@@ -269,12 +269,12 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  sni: id-05v2.cemilan-vpn.my.id
+  sni: id-idc.cemilan-vpn.my.id
   network: ws
   ws-opts:
     path: /trojan-ws
     headers:
-      Host: id-05v2.cemilan-vpn.my.id
+      Host: id-idc.cemilan-vpn.my.id
 
 #TROJAN GRPC-CDN
 - name: "TR ID-IKD GRPC-CDN"
@@ -285,7 +285,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  sni: id-ikdv2.cemilan-vpn.my.id
+  sni: id-ikd.cemilan-vpn.my.id
   network: grpc
   grpc-opts:
     grpc-service-name: trojan-grpc
@@ -298,7 +298,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  sni: id-apikv2.cemilan-vpn.my.id
+  sni: id-apik.cemilan-vpn.my.id
   network: grpc
   grpc-opts:
     grpc-service-name: trojan-grpc
@@ -311,7 +311,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  sni: id-06v2.cemilan-vpn.my.id
+  sni: id-infy.cemilan-vpn.my.id
   network: grpc
   grpc-opts:
     grpc-service-name: trojan-grpc
@@ -324,7 +324,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  sni: id-05v2.cemilan-vpn.my.id
+  sni: id-idc.cemilan-vpn.my.id
   network: grpc
   grpc-opts:
     grpc-service-name: trojan-grpc
