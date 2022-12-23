@@ -1,10 +1,27 @@
 proxies:
 #VMESS-WS-SSL-CDN
+- name: "VM ID-BIZ WS-SSL-CDN"
+  type: vmess
+  server: 104.17.3.81
+  port: 443
+  uuid: 5949f70d-0faf-4bb9-b020-78804a5aaee0
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: id-biz.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id-biz.cemilan-vpn.my.id
+
 - name: "VM ID-IKD WS-SSL-CDN"
   type: vmess
   server: 104.17.3.81
   port: 443
-  uuid: 06eb3154-be1d-4f19-bd83-40c193b6c503
+  uuid: 741bc5bb-a78b-45ed-b22f-b9428888a1cd
   alterId: 0
   cipher: auto
   udp: true
@@ -21,7 +38,7 @@ proxies:
   type: vmess
   server: 104.17.3.81
   port: 443
-  uuid: 789f3ab5-c226-41f9-bdd6-536661e954a9
+  uuid: 2e853cc1-9690-4341-afb8-bcd908a75bf1
   alterId: 0
   cipher: auto
   udp: true
@@ -38,7 +55,7 @@ proxies:
   type: vmess
   server: 104.17.3.81
   port: 443
-  uuid: 97896824-4ced-4e31-8c23-c7bedadf4a20
+  uuid: 7f72ade0-dc16-429b-8177-d3fca4ca99cb
   alterId: 0
   cipher: auto
   udp: true
@@ -55,7 +72,7 @@ proxies:
   type: vmess
   server: 104.17.3.81
   port: 443
-  uuid: 2acdd454-d85e-49a8-be61-29a2bd98d6aa
+  uuid: 96b533fc-a716-4484-ad55-f7fe56f9408d
   alterId: 0
   cipher: auto
   udp: true
@@ -73,7 +90,7 @@ proxies:
   type: vmess
   server: 104.17.3.81
   port: 80
-  uuid: 50686818-386e-4f2c-8174-0789245748fc
+  uuid: 5949f70d-0faf-4bb9-b020-78804a5aaee0
   alterId: 0
   cipher: auto
   udp: true
@@ -82,7 +99,7 @@ proxies:
   servername: id-biz.cemilan-vpn.my.id
   network: ws
   ws-opts:
-    path: /v2ray
+    path: /vmess
     headers:
       Host: id-biz.cemilan-vpn.my.id
 
@@ -90,7 +107,7 @@ proxies:
   type: vmess
   server: 104.17.3.81
   port: 80
-  uuid: 06eb3154-be1d-4f19-bd83-40c193b6c503
+  uuid: 741bc5bb-a78b-45ed-b22f-b9428888a1cd
   alterId: 0
   cipher: auto
   udp: true
@@ -107,7 +124,7 @@ proxies:
   type: vmess
   server: 104.17.3.81
   port: 80
-  uuid: 789f3ab5-c226-41f9-bdd6-536661e954a9
+  uuid: 2e853cc1-9690-4341-afb8-bcd908a75bf1
   alterId: 0
   cipher: auto
   udp: true
@@ -124,7 +141,7 @@ proxies:
   type: vmess
   server: 104.17.3.81
   port: 80
-  uuid: 97896824-4ced-4e31-8c23-c7bedadf4a20
+  uuid: 7f72ade0-dc16-429b-8177-d3fca4ca99cb
   alterId: 0
   cipher: auto
   udp: true
@@ -141,7 +158,7 @@ proxies:
   type: vmess
   server: 104.17.3.81
   port: 80
-  uuid: 2acdd454-d85e-49a8-be61-29a2bd98d6aa
+  uuid: 96b533fc-a716-4484-ad55-f7fe56f9408d
   alterId: 0
   cipher: auto
   udp: true
@@ -155,11 +172,26 @@ proxies:
       Host: id-idc.cemilan-vpn.my.id
 
 #VMESS-GRPC-CDN
+- name: "VM ID-BIZ GRPC-CDN"
+  type: vmess
+  server: 104.17.3.81
+  port: 443
+  uuid: 5949f70d-0faf-4bb9-b020-78804a5aaee0
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: id-biz.cemilan-vpn.my.id
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+
 - name: "VM ID-IKD GRPC-CDN"
   type: vmess
   server: 104.17.3.81
   port: 443
-  uuid: 27cb05d8-6f47-4173-9e98-e5cf7fb6ee32
+  uuid: 741bc5bb-a78b-45ed-b22f-b9428888a1cd
   alterId: 0
   cipher: auto
   udp: true
@@ -174,7 +206,7 @@ proxies:
   type: vmess
   server: 104.17.3.81
   port: 443
-  uuid: 3a0b738e-f9b6-4421-b783-aaaa65db6e3b
+  uuid: 2e853cc1-9690-4341-afb8-bcd908a75bf1
   alterId: 0
   cipher: auto
   udp: true
@@ -189,7 +221,7 @@ proxies:
   type: vmess
   server: 104.17.3.81
   port: 443
-  uuid: 97896824-4ced-4e31-8c23-c7bedadf4a20
+  uuid: 7f72ade0-dc16-429b-8177-d3fca4ca99cb
   alterId: 0
   cipher: auto
   udp: true
@@ -204,7 +236,7 @@ proxies:
   type: vmess
   server: 104.17.3.81
   port: 443
-  uuid: 2acdd454-d85e-49a8-be61-29a2bd98d6aa
+  uuid: 96b533fc-a716-4484-ad55-f7fe56f9408d
   alterId: 0
   cipher: auto
   udp: true
@@ -216,11 +248,26 @@ proxies:
     grpc-service-name: vmess-grpc
 
 #TROJAN WS-CDN
+- name: "TR ID-BIZ WS-CDN"
+  type: trojan
+  server: 104.17.3.81
+  port: 443
+  password: f87bfdae-128c-46b9-8128-777b98339b3c
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  sni: id-biz.cemilan-vpn.my.id
+  network: ws
+  ws-opts:
+    path: /trojan-ws
+    headers:
+      Host: id-biz.cemilan-vpn.my.id
+
 - name: "TR ID-IKD WS-CDN"
   type: trojan
   server: 104.17.3.81
   port: 443
-  password: 26995653-705a-493f-84fc-98d8aebfd2db
+  password: 71a290d0-2453-48ea-8cf1-982624458d4d
   udp: true
   tls: true
   skip-cert-verify: true
@@ -235,7 +282,7 @@ proxies:
   type: trojan
   server: 104.17.3.81
   port: 443
-  password: ed923e75-a040-4df4-abea-fb7da0f5cb03
+  password: 3bc58c21-1e2a-42c8-af5e-209530789192
   udp: true
   tls: true
   skip-cert-verify: true
@@ -250,7 +297,7 @@ proxies:
   type: trojan
   server: 104.17.3.81
   port: 443
-  password: 704e4ca2-b6a0-4854-bc4d-5995342556f1
+  password: 21ec2fd3-2f6c-41b4-8d0e-0b4001ef888a
   udp: true
   tls: true
   skip-cert-verify: true
@@ -265,7 +312,7 @@ proxies:
   type: trojan
   server: 104.17.3.81
   port: 443
-  password: 5d7ac98c-6100-48dd-b4ae-7964627d443d
+  password: e0919a09-3edb-4857-9674-edfe2f68ed21
   udp: true
   tls: true
   skip-cert-verify: true
@@ -277,11 +324,24 @@ proxies:
       Host: id-idc.cemilan-vpn.my.id
 
 #TROJAN GRPC-CDN
+- name: "TR ID-BIZ GRPC-CDN"
+  type: trojan
+  server: 104.17.3.81
+  port: 443
+  password: f87bfdae-128c-46b9-8128-777b98339b3c
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  sni: id-biz.cemilan-vpn.my.id
+  network: grpc
+  grpc-opts:
+    grpc-service-name: trojan-grpc
+
 - name: "TR ID-IKD GRPC-CDN"
   type: trojan
   server: 104.17.3.81
   port: 443
-  password: 49f5848e-3278-479c-91fa-3a258add9ff9
+  password: 71a290d0-2453-48ea-8cf1-982624458d4d
   udp: true
   tls: true
   skip-cert-verify: true
@@ -294,7 +354,7 @@ proxies:
   type: trojan
   server: 104.17.3.81
   port: 443
-  password: ee198d0a-ac58-4f7b-a7a5-957bc7f7f35e
+  password: 3bc58c21-1e2a-42c8-af5e-209530789192
   udp: true
   tls: true
   skip-cert-verify: true
@@ -307,7 +367,7 @@ proxies:
   type: trojan
   server: 104.17.3.81
   port: 443
-  password: 704e4ca2-b6a0-4854-bc4d-5995342556f1
+  password: 21ec2fd3-2f6c-41b4-8d0e-0b4001ef888a
   udp: true
   tls: true
   skip-cert-verify: true
@@ -320,7 +380,7 @@ proxies:
   type: trojan
   server: 104.17.3.81
   port: 443
-  password: 5d7ac98c-6100-48dd-b4ae-7964627d443d
+  password: e0919a09-3edb-4857-9674-edfe2f68ed21
   udp: true
   tls: true
   skip-cert-verify: true
