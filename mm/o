@@ -1,48 +1,48 @@
 #!/bin/bash
 cd /usr/bin/
-wget -qO https://raw.githubusercontent.com/ayaze01/clash/main/mm/add-ssh
-wget -qO https://raw.githubusercontent.com/ayaze01/clash/main/mm/add-ws
-wget -qO https://raw.githubusercontent.com/ayaze01/clash/main/mm/add-vless
-wget -qO https://raw.githubusercontent.com/ayaze01/clash/main/mm/add-tr
-wget -qO https://raw.githubusercontent.com/ayaze01/clash/main/mm/add-ss
+wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/add-ssh
+wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/add-ws
+wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/add-vless
+wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/add-tr
+wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/add-ss
 chmod +x add-ssh
 chmod +x add-ws
 chmod +x add-vless
 chmod +x add-tr
 chmod +x add-ss
-wget -qO https://raw.githubusercontent.com/ayaze01/clash/main/mm/cek-ssh
-wget -qO https://raw.githubusercontent.com/ayaze01/clash/main/mm/cek-ws
-wget -qO https://raw.githubusercontent.com/ayaze01/clash/main/mm/cek-vless
-wget -qO https://raw.githubusercontent.com/ayaze01/clash/main/mm/cek-tr
-wget -qO https://raw.githubusercontent.com/ayaze01/clash/main/mm/cek-ss
+wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/cek-ssh
+wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/cek-ws
+wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/cek-vless
+wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/cek-tr
+wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/cek-ss
 chmod +x cek-ssh
 chmod +x cek-ws
 chmod +x cek-vless
 chmod +x cek-tr
 chmod +x cek-ss
-wget -qO https://raw.githubusercontent.com/ayaze01/clash/main/mm/del-ssh
-wget -qO https://raw.githubusercontent.com/ayaze01/clash/main/mm/del-ws
-wget -qO https://raw.githubusercontent.com/ayaze01/clash/main/mm/del-vless
-wget -qO https://raw.githubusercontent.com/ayaze01/clash/main/mm/del-tr
-wget -qO https://raw.githubusercontent.com/ayaze01/clash/main/mm/del-ss
+wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/del-ssh
+wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/del-ws
+wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/del-vless
+wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/del-tr
+wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/del-ss
 chmod +x del-ssh
 chmod +x del-ws
 chmod +x del-vless
 chmod +x del-tr
 chmod +x del-ss
-wget -qO https://raw.githubusercontent.com/ayaze01/clash/main/mm/renew-ssh
-wget -qO https://raw.githubusercontent.com/ayaze01/clash/main/mm/renew-ws
-wget -qO https://raw.githubusercontent.com/ayaze01/clash/main/mm/renew-vless
-wget -qO https://raw.githubusercontent.com/ayaze01/clash/main/mm/renew-tr
-wget -qO https://raw.githubusercontent.com/ayaze01/clash/main/mm/renew-ss
+wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/renew-ssh
+wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/renew-ws
+wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/renew-vless
+wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/renew-tr
+wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/renew-ss
 chmod +x renew-ssh
 chmod +x renew-ws
 chmod +x renew-vless
 chmod +x renew-tr
 chmod +x renew-ss
-wget -qO https://raw.githubusercontent.com/ayaze01/clash/main/mm/get-domain
+wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/get-domain
 chmod +x get-domain
-wget -qO https://raw.githubusercontent.com/ayaze01/clash/main/mm/update
+wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/update
 chmod +x update
 cd
 rm -f o
