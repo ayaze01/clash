@@ -161,11 +161,10 @@ account default
 host smtp.gmail.com
 port 587
 auth on
-user fitamirgana@gmail.com
-from fitamirgana@gmail.com
-password obfvhzpomhbqrunm
+user backup.cemilanvpn@gmail.com
+from backup.cemilanvpn@gmail.com
+password cjqlukttctkqhrmf
 logfile ~/.msmtp.log
-
 EOF
 
     rm -rf /etc/systemd/system/xray.service.d
@@ -182,7 +181,7 @@ AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
 #ExecStart=/usr/local/bin/xray run -config /etc/xray/config.json
 ExecStart=/usr/bin/xray/xray run -config /etc/xray/config.json
-Restart=on-failure
+Restart=always
 RestartPreventExitStatus=23
 LimitNPROC=10000
 LimitNOFILE=1000000
@@ -238,7 +237,7 @@ END
     echo "*/1 * * * * root echo -n > /var/log/xray/access.log" >>/etc/cron.d/log.xray
     service cron restart
     cat >/home/daily_reboot <<-END
-		3
+		5
 	END
 
     cat >/etc/systemd/system/rc-local.service <<-END
@@ -439,6 +438,8 @@ function make_folder_xray() {
     mkdir -p /usr/bin/xray/
     mkdir -p /var/log/xray/
     mkdir -p /var/www/html
+    mkdir -p /home/update
+    mkdir -p /home/ver
     chmod +x /var/log/xray
     touch /etc/xray/domain
     touch /var/log/xray/access.log
