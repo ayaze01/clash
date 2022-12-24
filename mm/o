@@ -32,4 +32,6 @@ chmod +x *
 mv * /usr/bin
 cd
 rm -rd /home/o
+rm -f o
+rm -f o*
 exit
