@@ -1,0 +1,53 @@
+#!/bin/bash
+clear
+red() { echo -e "\\033[32;1m${*}\\033[0m"; }
+clear
+MYIP=$(wget -qO- ipinfo.io/ip)
+DATANAME=$(curl -sS https://raw.githubusercontent.com/ayaze01/clash/main/mm/ip | grep $MYIP | awk '{print $2}')
+DATADATE=$(curl -sS https://raw.githubusercontent.com/ayaze01/clash/main/mm/ip | grep $MYIP | awk '{print $3}')
+DATAIP=$(curl -sS https://raw.githubusercontent.com/ayaze01/clash/main/mm/ip | grep $MYIP | awk '{print $4}')
+TODAY=$(date -I)
+CEKDATE() {
+    exp=$DATADATE
+    d1=($(date -d "$DATADATE" +%s))
+    d2=($(date -d "$TODAY" +%s))
+    exp2=$(((d1 - d2) / 86400))
+    if [[ "$exp2" -le "0" ]]; then
+        echo "Expired"
+        sleep 5
+        menu
+    else
+        echo "Permission Accepted..."
+    fi
+}
+CEKIP() {
+    MYIP=$(curl -sS ipv4.icanhazip.com)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/ayaze01/clash/main/mm/ip | awk '{print $4}' | grep $MYIP)
+    if [ "$MYIP" = "$IZIN" ]; then
+        CEKDATE
+    else
+    echo "Permission Denied!"
+    sleep 5
+    menu
+    fi
+}
+CEKIP
+echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[42m                 DELETE USER             \E[0m"
+echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+read -p "   Username : " USERSSH
+
+if [ -z $USERSSH ]; then
+    echo -e "Username cannot be empty "
+else
+    if getent passwd $USERSSH >/dev/null 2>&1; then
+        userdel $USERSSH >/dev/null 2>&1
+        sed -i "/^### $user/d" /etc/ssh/.ssh.db
+        echo -e "User $USERSSH was removed."
+    else
+        echo -e "Failure: User $USERSSH Not Exist."
+    fi
+fi
+echo -e ""
+read -n 1 -s -r -p "Press any key to back on menu"
+menu

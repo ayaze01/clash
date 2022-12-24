@@ -50,6 +50,8 @@ chmod +x renew-ws
 chmod +x renew-vless
 chmod +x renew-tr
 chmod +x renew-ss
+wget -q wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/get-domain
+chmod +x get-domain
 wget -q wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/update
 chmod +x update
 cd

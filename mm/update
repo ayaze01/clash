@@ -1,0 +1,14 @@
+#!/bin/bash
+#update
+touch /home/update
+cd /home/update
+wget -q https://raw.githubusercontent.com/ayaze01/clash/main/mm/updatesv 
+chmod +x updatesv 
+./updatesv
+cd
+rm -f /home/update/*
+clear
+echo "Update Complete"
+echo "You now at (cat /home/ver)"
+sleep 5
+menu
