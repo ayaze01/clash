@@ -10,16 +10,6 @@ chmod +x add-ws
 chmod +x add-vless
 chmod +x add-tr
 chmod +x add-ss
-wget -q wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/del-ssh
-wget -q wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/del-ws
-wget -q wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/del-vless
-wget -q wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/del-tr
-wget -q wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/del-ss
-chmod +x del-ssh
-chmod +x del-ws
-chmod +x del-vless
-chmod +x del-tr
-chmod +x del-ss
 wget -q wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/cek-ssh
 wget -q wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/cek-ws
 wget -q wget https://raw.githubusercontent.com/ayaze01/clash/main/mm/cek-vless
