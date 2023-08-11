@@ -1,0 +1,291 @@
+{
+  "log" : {
+    "access": "/var/log/xray/access.log",
+    "error": "/var/log/xray/error.log",
+    "loglevel": "warning"
+  },
+  "inbounds": [
+      {
+      "listen": "127.0.0.1",
+      "port": 10000,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "127.0.0.1"
+      },
+      "tag": "api"
+    },
+   {
+     "listen": "127.0.0.1",
+     "port": "10001",
+     "protocol": "vless",
+      "settings": {
+          "decryption":"none",
+            "clients": [
+               {
+                 "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
+#vless
+#& tr 2023-08-12
+},{"id": "8d5b9bb9-92c6-4216-a00a-f85fc6424ebe","email": "tr"
+#& vl 2023-08-12
+},{"id": "2caa0e78-5245-4953-93e7-62a63b429e6b","email": "vl"
+             }
+          ]
+       },
+       "streamSettings":{
+         "network": "ws",
+            "wsSettings": {
+                "path": "/vless"
+          }
+        }
+     },
+     {
+     "listen": "127.0.0.1",
+     "port": "10002",
+     "protocol": "vmess",
+      "settings": {
+            "clients": [
+               {
+                 "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0",
+                 "alterId": 0
+#vmess
+### rena212 2023-08-26
+},{"id": "73cc8a2e-6991-4659-97ef-e30f62ab6875","alterId": 0,"email": "rena212"
+### nurpi 2023-08-24
+},{"id": "9774efbd-edaf-4ba3-a7dc-eb097ae83b83","alterId": 0,"email": "nurpi"
+### xuigo097 2023-08-16
+},{"id": "1462a7c6-4dbf-4499-a03e-09fc72aeff06","alterId": 0,"email": "xuigo097"
+### Cemilanpipien 2023-08-24
+},{"id": "4b629956-e487-4bf2-acb6-5363b7b5adf3","alterId": 0,"email": "Cemilanpipien"
+### Indra 2023-08-13
+},{"id": "0a6b2dcc-1f18-496c-8465-21e8e696ceec","alterId": 0,"email": "Indra"
+### yf999 2023-08-26
+},{"id": "972c8c29-6ee1-4385-afc8-41f5db39dbce","alterId": 0,"email": "yf999"
+             }
+          ]
+       },
+       "streamSettings":{
+         "network": "ws",
+            "wsSettings": {
+                "path": "/vmess"
+          }
+        }
+     },
+    {
+      "listen": "127.0.0.1",
+      "port": "10003",
+      "protocol": "trojan",
+      "settings": {
+          "decryption":"none",
+           "clients": [
+              {
+                 "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
+#trojanws
+#! tr1 2023-08-12
+},{"password": "b9372c60-ce29-414f-83c1-e12c06263786","email": "tr1"
+              }
+          ],
+         "udp": true
+       },
+       "streamSettings":{
+           "network": "ws",
+           "wsSettings": {
+               "path": "/trojan-ws"
+            }
+         }
+     },
+    {
+         "listen": "127.0.0.1",
+        "port": "10004",
+        "protocol": "shadowsocks",
+        "settings": {
+           "clients": [
+           {
+           "method": "aes-128-gcm",
+          "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
+#ssws
+###& ss1 2023-08-12
+},{"password": "8c5ac6e1-1d07-47b5-9f4b-8e96c970745f","method": "aes-128-gcm","email": "ss1"
+           }
+          ],
+          "network": "tcp,udp"
+       },
+       "streamSettings":{
+          "network": "ws",
+             "wsSettings": {
+               "path": "/ss-ws"
+           }
+        }
+     },
+      {
+        "listen": "127.0.0.1",
+        "port": "10005",
+        "protocol": "vless",
+        "settings": {
+         "decryption":"none",
+           "clients": [
+             {
+               "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
+#vlessgrpc
+#& tr 2023-08-12
+},{"id": "8d5b9bb9-92c6-4216-a00a-f85fc6424ebe","email": "tr"
+#& vl 2023-08-12
+},{"id": "2caa0e78-5245-4953-93e7-62a63b429e6b","email": "vl"
+             }
+          ]
+       },
+          "streamSettings":{
+             "network": "grpc",
+             "grpcSettings": {
+                "serviceName": "vless-grpc"
+           }
+        }
+     },
+     {
+      "listen": "127.0.0.1",
+      "port": "10006",
+     "protocol": "vmess",
+      "settings": {
+            "clients": [
+               {
+                 "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0",
+                 "alterId": 0
+#vmessgrpc
+### rena212 2023-08-26
+},{"id": "73cc8a2e-6991-4659-97ef-e30f62ab6875","alterId": 0,"email": "rena212"
+### nurpi 2023-08-24
+},{"id": "9774efbd-edaf-4ba3-a7dc-eb097ae83b83","alterId": 0,"email": "nurpi"
+### xuigo097 2023-08-16
+},{"id": "1462a7c6-4dbf-4499-a03e-09fc72aeff06","alterId": 0,"email": "xuigo097"
+### Cemilanpipien 2023-08-24
+},{"id": "4b629956-e487-4bf2-acb6-5363b7b5adf3","alterId": 0,"email": "Cemilanpipien"
+### Indra 2023-08-13
+},{"id": "0a6b2dcc-1f18-496c-8465-21e8e696ceec","alterId": 0,"email": "Indra"
+### yf999 2023-08-26
+},{"id": "972c8c29-6ee1-4385-afc8-41f5db39dbce","alterId": 0,"email": "yf999"
+             }
+          ]
+       },
+       "streamSettings":{
+         "network": "grpc",
+            "grpcSettings": {
+                "serviceName": "vmess-grpc"
+          }
+        }
+     },
+     {
+        "listen": "127.0.0.1",
+        "port": "10007",
+        "protocol": "trojan",
+        "settings": {
+          "decryption":"none",
+             "clients": [
+               {
+                 "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
+#trojangrpc
+#! tr1 2023-08-12
+},{"password": "b9372c60-ce29-414f-83c1-e12c06263786","email": "tr1"
+               }
+           ]
+        },
+         "streamSettings":{
+         "network": "grpc",
+           "grpcSettings": {
+               "serviceName": "trojan-grpc"
+         }
+      }
+   },
+   {
+    "listen": "127.0.0.1",
+    "port": "10008",
+    "protocol": "shadowsocks",
+    "settings": {
+        "clients": [
+          {
+             "method": "aes-128-gcm",
+             "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
+#ssgrpc
+###& ss1 2023-08-12
+},{"password": "8c5ac6e1-1d07-47b5-9f4b-8e96c970745f","method": "aes-128-gcm","email": "ss1"
+           }
+         ],
+           "network": "tcp,udp"
+      },
+    "streamSettings":{
+     "network": "grpc",
+        "grpcSettings": {
+           "serviceName": "ss-grpc"
+          }
+       }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {},
+      "tag": "blocked"
+    }
+  ],
+  "routing": {
+    "rules": [
+      {
+        "type": "field",
+        "ip": [
+          "0.0.0.0/8",
+          "10.0.0.0/8",
+          "100.64.0.0/10",
+          "169.254.0.0/16",
+          "172.16.0.0/12",
+          "192.0.0.0/24",
+          "192.0.2.0/24",
+          "192.168.0.0/16",
+          "198.18.0.0/15",
+          "198.51.100.0/24",
+          "203.0.113.0/24",
+          "::1/128",
+          "fc00::/7",
+          "fe80::/10"
+        ],
+        "outboundTag": "blocked"
+      },
+      {
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "type": "field"
+      },
+      {
+        "type": "field",
+        "outboundTag": "blocked",
+        "protocol": [
+          "bittorrent"
+        ]
+      }
+    ]
+  },
+  "stats": {},
+  "api": {
+    "services": [
+      "StatsService"
+    ],
+    "tag": "api"
+  },
+  "policy": {
+    "levels": {
+      "0": {
+        "statsUserDownlink": true,
+        "statsUserUplink": true
+      }
+    },
+    "system": {
+      "statsInboundUplink": true,
+      "statsInboundDownlink": true,
+      "statsOutboundUplink" : true,
+      "statsOutboundDownlink" : true
+    }
+  }
+              }
