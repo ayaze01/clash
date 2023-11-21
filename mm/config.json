@@ -24,10 +24,7 @@
                {
                  "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
 #vless
-#& tr 2023-08-12
-},{"id": "8d5b9bb9-92c6-4216-a00a-f85fc6424ebe","email": "tr"
-#& vl 2023-08-12
-},{"id": "2caa0e78-5245-4953-93e7-62a63b429e6b","email": "vl"
+
              }
           ]
        },
@@ -122,8 +119,7 @@
               {
                  "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
 #trojanws
-#! tr1 2023-08-12
-},{"password": "b9372c60-ce29-414f-83c1-e12c06263786","email": "tr1"
+
               }
           ],
          "udp": true
@@ -145,8 +141,7 @@
            "method": "aes-128-gcm",
           "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
 #ssws
-###& ss1 2023-08-12
-},{"password": "8c5ac6e1-1d07-47b5-9f4b-8e96c970745f","method": "aes-128-gcm","email": "ss1"
+
            }
           ],
           "network": "tcp,udp"
@@ -168,10 +163,7 @@
              {
                "id": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
 #vlessgrpc
-#& tr 2023-08-12
-},{"id": "8d5b9bb9-92c6-4216-a00a-f85fc6424ebe","email": "tr"
-#& vl 2023-08-12
-},{"id": "2caa0e78-5245-4953-93e7-62a63b429e6b","email": "vl"
+
              }
           ]
        },
@@ -266,8 +258,7 @@
                {
                  "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
 #trojangrpc
-#! tr1 2023-08-12
-},{"password": "b9372c60-ce29-414f-83c1-e12c06263786","email": "tr1"
+
                }
            ]
         },
@@ -288,8 +279,7 @@
              "method": "aes-128-gcm",
              "password": "1d1c1d94-6987-4658-a4dc-8821a30fe7e0"
 #ssgrpc
-###& ss1 2023-08-12
-},{"password": "8c5ac6e1-1d07-47b5-9f4b-8e96c970745f","method": "aes-128-gcm","email": "ss1"
+
            }
          ],
            "network": "tcp,udp"
@@ -372,4 +362,4 @@
       "statsOutboundDownlink" : true
     }
   }
-              }
+             }
