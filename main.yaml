@@ -680,7 +680,6 @@ rules:
 - RULE-SET,rule_porn,TrafficPorn
 - RULE-SET,rule_nsfw,TrafficPorn
 - RULE-SET,rule_Direct,TrafficDirect
-- SCRIPT,speedtest,TrafficUmum
 - RULE-SET,rule_playstore,TrafficUmum
 - RULE-SET,rule_disneyplus,TrafficIndo
 - RULE-SET,rule_netflix,TrafficIndo
